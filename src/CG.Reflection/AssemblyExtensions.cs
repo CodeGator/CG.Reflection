@@ -17,8 +17,8 @@ namespace CG.Reflection
         #region Public methods
         
         /// <summary>
-        /// Reads the value of the <see cref="AssemblyCopyrightAttribute"/>
-        /// for the given assembly.
+        /// Reads the value of the <see cref="AssemblyCopyrightAttribute"/> 
+        /// attribute for the given assembly.
         /// </summary>
         /// <param name="assembly">The assembly to read from.</param>
         /// <returns>The value of the given assembly's copyright attribute.</returns>
@@ -50,7 +50,7 @@ namespace CG.Reflection
 
         /// <summary>
         /// Reads the value of the <see cref="AssemblyTitleAttribute"/>
-        /// for the given assembly.
+        /// attribute for the given assembly.
         /// </summary>
         /// <param name="assembly">The assembly to read from.</param>
         /// <returns>The value of the given assembly's title attribute.</returns>
@@ -82,7 +82,7 @@ namespace CG.Reflection
 
         /// <summary>
         /// Reads the value of the <see cref="AssemblyDescriptionAttribute"/>
-        /// for the given assembly.
+        /// attribute for the given assembly.
         /// </summary>
         /// <param name="assembly">The assembly to read from.</param>
         /// <returns>The value of the given assembly's description attribute.</returns>
@@ -114,7 +114,7 @@ namespace CG.Reflection
 
         /// <summary>
         /// Reads the value of the <see cref="AssemblyCompanyAttribute"/>
-        /// for the given assembly.
+        /// attribute for the given assembly.
         /// </summary>
         /// <param name="assembly">The assembly to read from.</param>
         /// <returns>The value of the given assembly's company attribute.</returns>
@@ -146,7 +146,7 @@ namespace CG.Reflection
 
         /// <summary>
         /// Reads the value of the <see cref="AssemblyProductAttribute"/>
-        /// for the given assembly.
+        /// attribute for the given assembly.
         /// </summary>
         /// <param name="assembly">The assembly to read from.</param>
         /// <returns>The value of the given assembly's product attribute.</returns>
@@ -178,7 +178,7 @@ namespace CG.Reflection
 
         /// <summary>
         /// Reads the value of the <see cref="AssemblyTrademarkAttribute"/>
-        /// for the given assembly.
+        /// attribute for the given assembly.
         /// </summary>
         /// <param name="assembly">The assembly to read from.</param>
         /// <returns>The value of the given assembly's trademark attribute.</returns>
@@ -210,7 +210,7 @@ namespace CG.Reflection
 
         /// <summary>
         /// Reads the value of the <see cref="AssemblyVersionAttribute"/>
-        /// for the given assembly.
+        /// attribute for the given assembly.
         /// </summary>
         /// <param name="assembly">The assembly to read from.</param>
         /// <returns>The value of the given assembly's version attribute.</returns>
@@ -242,7 +242,7 @@ namespace CG.Reflection
 
         /// <summary>
         /// Reads the value of the <see cref="AssemblyInformationalVersionAttribute"/>
-        /// for the given assembly.
+        /// attribute for the given assembly.
         /// </summary>
         /// <param name="assembly">The assembly to read from.</param>
         /// <returns>The value of the given assembly's informational version attribute.</returns>
@@ -290,7 +290,7 @@ namespace CG.Reflection
 
         /// <summary>
         /// Reads the value of the <see cref="AssemblyFileVersionAttribute"/>
-        /// for the given assembly.
+        /// attribute for the given assembly.
         /// </summary>
         /// <param name="assembly">The assembly to read from.</param>
         /// <returns>The value of the given assembly's file version attribute.</returns>
@@ -321,8 +321,8 @@ namespace CG.Reflection
         // ******************************************************************
 
         /// <summary>
-        /// Reads the value of the <see cref="GuidAttribute"/>
-        /// for the given assembly.
+        /// Reads the value of the <see cref="GuidAttribute"/> attribute 
+        /// attribute for the given assembly.
         /// </summary>
         /// <param name="assembly">The assembly to read from.</param>
         /// <returns>The value of the given assembly's guid attribute.</returns>
