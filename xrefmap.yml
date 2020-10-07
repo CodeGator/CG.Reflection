@@ -335,19 +335,32 @@ references:
   commentId: T:CG.Reflection.Services.IPackageService
   fullName: CG.Reflection.Services.IPackageService
   nameWithType: IPackageService
-- uid: CG.Reflection.Services.IPackageService.CallingExecutable
-  name: CallingExecutable
-  href: api/CG.Reflection.Services.IPackageService.html#CG_Reflection_Services_IPackageService_CallingExecutable
-  commentId: P:CG.Reflection.Services.IPackageService.CallingExecutable
-  fullName: CG.Reflection.Services.IPackageService.CallingExecutable
-  nameWithType: IPackageService.CallingExecutable
-- uid: CG.Reflection.Services.IPackageService.CallingExecutable*
-  name: CallingExecutable
-  href: api/CG.Reflection.Services.IPackageService.html#CG_Reflection_Services_IPackageService_CallingExecutable_
-  commentId: Overload:CG.Reflection.Services.IPackageService.CallingExecutable
+- uid: CG.Reflection.Services.IPackageService.CallingAssembly
+  name: CallingAssembly
+  href: api/CG.Reflection.Services.IPackageService.html#CG_Reflection_Services_IPackageService_CallingAssembly
+  commentId: P:CG.Reflection.Services.IPackageService.CallingAssembly
+  fullName: CG.Reflection.Services.IPackageService.CallingAssembly
+  nameWithType: IPackageService.CallingAssembly
+- uid: CG.Reflection.Services.IPackageService.CallingAssembly*
+  name: CallingAssembly
+  href: api/CG.Reflection.Services.IPackageService.html#CG_Reflection_Services_IPackageService_CallingAssembly_
+  commentId: Overload:CG.Reflection.Services.IPackageService.CallingAssembly
   isSpec: "True"
-  fullName: CG.Reflection.Services.IPackageService.CallingExecutable
-  nameWithType: IPackageService.CallingExecutable
+  fullName: CG.Reflection.Services.IPackageService.CallingAssembly
+  nameWithType: IPackageService.CallingAssembly
+- uid: CG.Reflection.Services.IPackageService.EntryAssembly
+  name: EntryAssembly
+  href: api/CG.Reflection.Services.IPackageService.html#CG_Reflection_Services_IPackageService_EntryAssembly
+  commentId: P:CG.Reflection.Services.IPackageService.EntryAssembly
+  fullName: CG.Reflection.Services.IPackageService.EntryAssembly
+  nameWithType: IPackageService.EntryAssembly
+- uid: CG.Reflection.Services.IPackageService.EntryAssembly*
+  name: EntryAssembly
+  href: api/CG.Reflection.Services.IPackageService.html#CG_Reflection_Services_IPackageService_EntryAssembly_
+  commentId: Overload:CG.Reflection.Services.IPackageService.EntryAssembly
+  isSpec: "True"
+  fullName: CG.Reflection.Services.IPackageService.EntryAssembly
+  nameWithType: IPackageService.EntryAssembly
 - uid: CG.Reflection.Services.PackageService
   name: PackageService
   href: api/CG.Reflection.Services.PackageService.html
@@ -367,16 +380,29 @@ references:
   isSpec: "True"
   fullName: CG.Reflection.Services.PackageService.PackageService
   nameWithType: PackageService.PackageService
-- uid: CG.Reflection.Services.PackageService.CallingExecutable
-  name: CallingExecutable
-  href: api/CG.Reflection.Services.PackageService.html#CG_Reflection_Services_PackageService_CallingExecutable
-  commentId: P:CG.Reflection.Services.PackageService.CallingExecutable
-  fullName: CG.Reflection.Services.PackageService.CallingExecutable
-  nameWithType: PackageService.CallingExecutable
-- uid: CG.Reflection.Services.PackageService.CallingExecutable*
-  name: CallingExecutable
-  href: api/CG.Reflection.Services.PackageService.html#CG_Reflection_Services_PackageService_CallingExecutable_
-  commentId: Overload:CG.Reflection.Services.PackageService.CallingExecutable
+- uid: CG.Reflection.Services.PackageService.CallingAssembly
+  name: CallingAssembly
+  href: api/CG.Reflection.Services.PackageService.html#CG_Reflection_Services_PackageService_CallingAssembly
+  commentId: P:CG.Reflection.Services.PackageService.CallingAssembly
+  fullName: CG.Reflection.Services.PackageService.CallingAssembly
+  nameWithType: PackageService.CallingAssembly
+- uid: CG.Reflection.Services.PackageService.CallingAssembly*
+  name: CallingAssembly
+  href: api/CG.Reflection.Services.PackageService.html#CG_Reflection_Services_PackageService_CallingAssembly_
+  commentId: Overload:CG.Reflection.Services.PackageService.CallingAssembly
   isSpec: "True"
-  fullName: CG.Reflection.Services.PackageService.CallingExecutable
-  nameWithType: PackageService.CallingExecutable
+  fullName: CG.Reflection.Services.PackageService.CallingAssembly
+  nameWithType: PackageService.CallingAssembly
+- uid: CG.Reflection.Services.PackageService.EntryAssembly
+  name: EntryAssembly
+  href: api/CG.Reflection.Services.PackageService.html#CG_Reflection_Services_PackageService_EntryAssembly
+  commentId: P:CG.Reflection.Services.PackageService.EntryAssembly
+  fullName: CG.Reflection.Services.PackageService.EntryAssembly
+  nameWithType: PackageService.EntryAssembly
+- uid: CG.Reflection.Services.PackageService.EntryAssembly*
+  name: EntryAssembly
+  href: api/CG.Reflection.Services.PackageService.html#CG_Reflection_Services_PackageService_EntryAssembly_
+  commentId: Overload:CG.Reflection.Services.PackageService.EntryAssembly
+  isSpec: "True"
+  fullName: CG.Reflection.Services.PackageService.EntryAssembly
+  nameWithType: PackageService.EntryAssembly

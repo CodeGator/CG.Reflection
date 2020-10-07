@@ -22,7 +22,7 @@
   "api/CG.Reflection.Services.html": {
     "href": "api/CG.Reflection.Services.html",
     "title": "Namespace CG.Reflection.Services",
-    "keywords": "Namespace CG.Reflection.Services Classes PackageService This class is a default implementation of the IPackageService interface. Interfaces IPackageInfo This interface represents an object that contains package information about a .NET assembly. IPackageService This interface represents an object that contains good-to-know information about the current application and its components."
+    "keywords": "Namespace CG.Reflection.Services Classes PackageService This class is a default implementation of the IPackageService interface. Interfaces IPackageInfo This interface represents an object that contains package information about a .NET assembly. IPackageService This interface represents an object that contains good-to-know information about well-known assemblies and their components."
   },
   "api/CG.Reflection.Services.IPackageInfo.html": {
     "href": "api/CG.Reflection.Services.IPackageInfo.html",
@@ -32,12 +32,12 @@
   "api/CG.Reflection.Services.IPackageService.html": {
     "href": "api/CG.Reflection.Services.IPackageService.html",
     "title": "Interface IPackageService",
-    "keywords": "Interface IPackageService This interface represents an object that contains good-to-know information about the current application and its components. Namespace : CG.Reflection.Services Assembly : CG.Reflection.dll Syntax public interface IPackageService Properties CallingExecutable This property contains package information for the calling executable. Declaration IPackageInfo CallingExecutable { get; } Property Value Type Description IPackageInfo"
+    "keywords": "Interface IPackageService This interface represents an object that contains good-to-know information about well-known assemblies and their components. Namespace : CG.Reflection.Services Assembly : CG.Reflection.dll Syntax public interface IPackageService Properties CallingAssembly This property contains package information for the calling assembly. Declaration IPackageInfo CallingAssembly { get; } Property Value Type Description IPackageInfo EntryAssembly This property contains package information for the entry assembly. Declaration IPackageInfo EntryAssembly { get; } Property Value Type Description IPackageInfo"
   },
   "api/CG.Reflection.Services.PackageService.html": {
     "href": "api/CG.Reflection.Services.PackageService.html",
     "title": "Class PackageService",
-    "keywords": "Class PackageService This class is a default implementation of the IPackageService interface. Inheritance System.Object PackageService Implements IPackageService Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : CG.Reflection.Services Assembly : CG.Reflection.dll Syntax public class PackageService : IPackageService Constructors PackageService() This constructor creates a new instance of the PackageService class. Declaration public PackageService() Properties CallingExecutable This property contains package information for the calling executable. Declaration public IPackageInfo CallingExecutable { get; } Property Value Type Description IPackageInfo Implements IPackageService"
+    "keywords": "Class PackageService This class is a default implementation of the IPackageService interface. Inheritance System.Object PackageService Implements IPackageService Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : CG.Reflection.Services Assembly : CG.Reflection.dll Syntax public class PackageService : IPackageService Constructors PackageService() This constructor creates a new instance of the PackageService class. Declaration public PackageService() Properties CallingAssembly This property contains package information for the calling assembly. Declaration public IPackageInfo CallingAssembly { get; } Property Value Type Description IPackageInfo EntryAssembly This property contains package information for the entry assembly. Declaration public IPackageInfo EntryAssembly { get; } Property Value Type Description IPackageInfo Implements IPackageService"
   },
   "api/index.html": {
     "href": "api/index.html",
