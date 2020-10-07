@@ -30,7 +30,7 @@ namespace CG.Reflection.Services
 
             // Assert ...
             Assert.IsTrue(
-                result.CallingExecutable != null,
+                result.CallingAssembly != null,
                 "The CallingExecutable property wasn't initialized by the ctor."
                 );
         }

@@ -18,9 +18,14 @@ namespace CG.Reflection.Services
         #region Fields
 
         /// <summary>
-        /// This field contains info for the calling executable.
+        /// This field contains info for the calling assembly.
         /// </summary>
-        private readonly Lazy<IPackageInfo> _callingExecutable;
+        private readonly Lazy<IPackageInfo> _callingAssembly;
+
+        /// <summary>
+        /// This field contains info for the entry assembly.
+        /// </summary>
+        private readonly Lazy<IPackageInfo> _entryAssembly;
 
         #endregion
 
@@ -31,7 +36,10 @@ namespace CG.Reflection.Services
         #region Properties
 
         /// <inheritdoc />
-        public IPackageInfo CallingExecutable => _callingExecutable.Value;
+        public IPackageInfo CallingAssembly => _callingAssembly.Value;
+
+        /// <inheritdoc />
+        public IPackageInfo EntryAssembly => _entryAssembly.Value;
 
         #endregion
 
@@ -49,9 +57,16 @@ namespace CG.Reflection.Services
         {
             // Lazy load the fields (we won't need them until/unless we need them).
 
-            _callingExecutable = new Lazy<IPackageInfo>(() => 
+            _callingAssembly = new Lazy<IPackageInfo>(() => 
             {
-                var asm = Assembly.GetExecutingAssembly();
+                var asm = Assembly.GetCallingAssembly();
+                var obj = new PackageInfo(asm);
+                return obj;
+            });
+
+            _entryAssembly = new Lazy<IPackageInfo>(() =>
+            {
+                var asm = Assembly.GetEntryAssembly();
                 var obj = new PackageInfo(asm);
                 return obj;
             });

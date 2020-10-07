@@ -4,13 +4,18 @@ namespace CG.Reflection.Services
 {
     /// <summary>
     /// This interface represents an object that contains good-to-know
-    /// information about the current application and its components.
+    /// information about well-known assemblies and their components.
     /// </summary>
     public interface IPackageService
     {
         /// <summary>
-        /// This property contains package information for the calling executable.
+        /// This property contains package information for the calling assembly.
         /// </summary>
-        IPackageInfo CallingExecutable { get; }
+        IPackageInfo CallingAssembly { get; }
+
+        /// <summary>
+        /// This property contains package information for the entry assembly.
+        /// </summary>
+        IPackageInfo EntryAssembly { get; }
     }
 }
