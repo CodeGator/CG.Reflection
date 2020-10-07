@@ -17,13 +17,13 @@ namespace CG.Reflection.Services
         #region Properties
 
         /// <inheritdoc />
-        public Version? AssemblyVersion { get; }
+        public Version AssemblyVersion { get; }
 
         /// <inheritdoc />
-        public Version? FileVersion { get; }
+        public Version FileVersion { get; }
 
         /// <inheritdoc />
-        public Version? InformationalVersion { get; }
+        public Version InformationalVersion { get; }
 
         /// <inheritdoc />
         public string Copyright { get; }
