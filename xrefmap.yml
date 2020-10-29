@@ -87,19 +87,6 @@ references:
   isSpec: "True"
   fullName: CG.Reflection.AssemblyExtensions.ReadDescription
   nameWithType: AssemblyExtensions.ReadDescription
-- uid: CG.Reflection.AssemblyExtensions.ReadFileVersion(System.Reflection.Assembly)
-  name: ReadFileVersion(Assembly)
-  href: api/CG.Reflection.AssemblyExtensions.html#CG_Reflection_AssemblyExtensions_ReadFileVersion_System_Reflection_Assembly_
-  commentId: M:CG.Reflection.AssemblyExtensions.ReadFileVersion(System.Reflection.Assembly)
-  fullName: CG.Reflection.AssemblyExtensions.ReadFileVersion(System.Reflection.Assembly)
-  nameWithType: AssemblyExtensions.ReadFileVersion(Assembly)
-- uid: CG.Reflection.AssemblyExtensions.ReadFileVersion*
-  name: ReadFileVersion
-  href: api/CG.Reflection.AssemblyExtensions.html#CG_Reflection_AssemblyExtensions_ReadFileVersion_
-  commentId: Overload:CG.Reflection.AssemblyExtensions.ReadFileVersion
-  isSpec: "True"
-  fullName: CG.Reflection.AssemblyExtensions.ReadFileVersion
-  nameWithType: AssemblyExtensions.ReadFileVersion
 - uid: CG.Reflection.AssemblyExtensions.ReadGuid(System.Reflection.Assembly)
   name: ReadGuid(Assembly)
   href: api/CG.Reflection.AssemblyExtensions.html#CG_Reflection_AssemblyExtensions_ReadGuid_System_Reflection_Assembly_
