@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CG.Reflection\CG.Reflection.csproj" />
+    <ProjectReference Include="..\..\src\CG.Reflection\CG.Reflection.csproj" />
   </ItemGroup>
 
 </Project>

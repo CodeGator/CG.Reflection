@@ -164,26 +164,38 @@ namespace CG.Reflection
                         // Get the RHS of the comparison.
                         var rhs = new Type[] { extensionType }.Concat(parameterTypes).ToArray();
 
-                        // Don't add methods with mismatched sigs.
+                        // At this point we only know that we have an extension method with a matching
+                        //   name. We don't know if the signatures match, or not. Let's go determine 
+                        //   that now.
+
+                        // Ignore methods with mismatched signatures.
                         if (lhs.Count() != rhs.Count())
                         {
                             // Skip it.
                             continue;
                         }
 
-                        // Try to match assignable types.
-                        for (int z = 1; z < lhs.Length; z++)
+                        // Now verify that all the argument types either match, or at least, are
+                        //   assignable types (so that inherited/derived types work).
+
+                        var shouldAdd = true; // Assume we should add the method.
+
+                        // Check for non-assignable args.
+                        for (int z = 0; z < lhs.Length; z++)
                         {
-                            // Are the types not assignable?
-                            if (!lhs[z].IsAssignableFrom(rhs[z]))
+                            // Are the arg types not assignable?
+                            if (false == lhs[z].IsAssignableFrom(rhs[z]))
                             {
-                                // Skip it.
-                                continue;
+                                shouldAdd = false; // Nope, we don't want this method.
+                                break;
                             }
                         }
 
-                        // Add the method to the collection.
-                        methods.Add(method);
+                        // Should we add the method?
+                        if (shouldAdd)
+                        {
+                            methods.Add(method);
+                        }
                     }
                 }
             });
