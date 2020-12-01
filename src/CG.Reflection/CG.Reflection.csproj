@@ -48,7 +48,7 @@ Platforms supported:
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\CG.Options\packageDefaultIcon-50x50.png">
+    <None Include="..\..\packageDefaultIcon-50x50.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
