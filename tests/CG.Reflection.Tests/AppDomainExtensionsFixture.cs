@@ -33,6 +33,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CG.Reflection
 {
+    public class A { }
+    public class B : A { }
+
     /// <summary>
     /// This class is used for internal testing purposes.
     /// </summary>
@@ -50,6 +53,13 @@ namespace CG.Reflection
         /// <param name="value">This parameter is used for internal testing purposes.</param>
         /// <param name="a">This parameter is used for internal testing purposes.</param>
         public static void TestMethod2(this int value, string a = "test") { }
+
+        /// <summary>
+        /// This method is used for internal testing purposes.
+        /// </summary>
+        /// <param name="value">This parameter is used for internal testing purposes.</param>
+        /// <param name="a">This parameter is used for internal testing purposes.</param>
+        public static void TestMethod3<T>(this int value, string a = "test") where T : A { }
     }
 
     /// <summary>
@@ -102,6 +112,29 @@ namespace CG.Reflection
                 "TestMethod2",
                 new Type[] { typeof(string) }
                 );
+
+            // Assert ...
+            Assert.IsTrue(result != null, "method returned an invalid value.");
+        }
+
+        // *******************************************************************
+
+        /// <summary>
+        /// This method verifies that the <see cref="AppDomainExtensions.ExtensionMethods{T}(AppDomain, Type, string, Type[], string, string)"/>
+        /// method can locate a test extension method with parameters and generic
+        /// type arguments.
+        /// </summary>
+        [TestMethod]
+        public void AppDomainExtensions_ExtensionMethods3()
+        {
+            // Arrange ...
+
+            // Act ...
+            var result = AppDomain.CurrentDomain.ExtensionMethods<B>(
+                typeof(int),
+                "TestMethod3",
+                new Type[] { typeof(string) }
+                );           
 
             // Assert ...
             Assert.IsTrue(result != null, "method returned an invalid value.");
