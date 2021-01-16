@@ -153,7 +153,7 @@ namespace CG.Reflection
                 foreach (var type in types)
                 {
                     // Look for any public extension methods with a matching name that
-                    //   don't have generic type arguments.
+                    //   doesn't have generic type arguments.
                     var typeMethods = type.GetMethods(
                         BindingFlags.Static | 
                         BindingFlags.Public
@@ -197,16 +197,25 @@ namespace CG.Reflection
                             // Are the arg types not assignable?
                             if (false == lhs[z].IsAssignableFrom(rhs[z]))
                             {
-                                shouldAdd = false; // Nope, we don't want this method.
-                                break;
+                                // Nope, we don't want this method.
+                                shouldAdd = false;
+                                break; // Take no for an answer.
                             }
                         }
 
                         // Should we add the method?
                         if (shouldAdd)
                         {
-                            methods.Add(method); // Found a match.
-                            break;
+                            // See if we've already added the method.
+                            shouldAdd |= methods.Any(x => x.Name == method.Name);
+                        }
+
+                        // Should we add the method?
+                        if (shouldAdd)
+                        {
+                            // Add the method.
+                            methods.Add(method);
+                            break; // Take yes for an answer.
                         }
                     }
                 }
