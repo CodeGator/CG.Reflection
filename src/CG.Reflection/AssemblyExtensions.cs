@@ -15,7 +15,7 @@ namespace CG.Reflection
         // *******************************************************************
 
         #region Public methods
-        
+
         /// <summary>
         /// Reads the value of the <see cref="AssemblyCopyrightAttribute"/> 
         /// attribute for the given assembly.
@@ -275,7 +275,7 @@ namespace CG.Reflection
             {
                 // Strip off everythign past the '+' character.
                 return attr.InformationalVersion.Substring(
-                    0, 
+                    0,
                     attr.InformationalVersion.Length - index - 2
                     );
             }
@@ -283,7 +283,7 @@ namespace CG.Reflection
             {
                 // Return the text for the attribute.
                 return attr.InformationalVersion;
-            }            
+            }
         }
 
         // ******************************************************************
