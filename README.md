@@ -11,7 +11,7 @@
 The package contains general purpose reflection classes used by other CodeGator packages.
 
 #### What platform(s) does it support?
-* .NET Standard 2.x or higher
+* .NET 5.x or higher
 
 #### How do I install it?
 The binary is hosted on [NuGet](https://www.nuget.org/packages/CG.Reflection/). To install the package using the NuGet package manager:
