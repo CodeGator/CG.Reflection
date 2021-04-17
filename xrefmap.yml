@@ -7,46 +7,6 @@ references:
   commentId: N:CG.Reflection
   fullName: CG.Reflection
   nameWithType: CG.Reflection
-- uid: CG.Reflection.AppDomainExtensions
-  name: AppDomainExtensions
-  href: api/CG.Reflection.AppDomainExtensions.html
-  commentId: T:CG.Reflection.AppDomainExtensions
-  fullName: CG.Reflection.AppDomainExtensions
-  nameWithType: AppDomainExtensions
-- uid: CG.Reflection.AppDomainExtensions.ExtensionMethods(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)
-  name: ExtensionMethods(AppDomain, Type, String, Type[], String, String)
-  href: api/CG.Reflection.AppDomainExtensions.html#CG_Reflection_AppDomainExtensions_ExtensionMethods_System_AppDomain_System_Type_System_String_System_Type___System_String_System_String_
-  commentId: M:CG.Reflection.AppDomainExtensions.ExtensionMethods(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)
-  name.vb: ExtensionMethods(AppDomain, Type, String, Type(), String, String)
-  fullName: CG.Reflection.AppDomainExtensions.ExtensionMethods(System.AppDomain, System.Type, System.String, System.Type[], System.String, System.String)
-  fullName.vb: CG.Reflection.AppDomainExtensions.ExtensionMethods(System.AppDomain, System.Type, System.String, System.Type(), System.String, System.String)
-  nameWithType: AppDomainExtensions.ExtensionMethods(AppDomain, Type, String, Type[], String, String)
-  nameWithType.vb: AppDomainExtensions.ExtensionMethods(AppDomain, Type, String, Type(), String, String)
-- uid: CG.Reflection.AppDomainExtensions.ExtensionMethods*
-  name: ExtensionMethods
-  href: api/CG.Reflection.AppDomainExtensions.html#CG_Reflection_AppDomainExtensions_ExtensionMethods_
-  commentId: Overload:CG.Reflection.AppDomainExtensions.ExtensionMethods
-  isSpec: "True"
-  fullName: CG.Reflection.AppDomainExtensions.ExtensionMethods
-  nameWithType: AppDomainExtensions.ExtensionMethods
-- uid: CG.Reflection.AppDomainExtensions.ExtensionMethods``1(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)
-  name: ExtensionMethods<T>(AppDomain, Type, String, Type[], String, String)
-  href: api/CG.Reflection.AppDomainExtensions.html#CG_Reflection_AppDomainExtensions_ExtensionMethods__1_System_AppDomain_System_Type_System_String_System_Type___System_String_System_String_
-  commentId: M:CG.Reflection.AppDomainExtensions.ExtensionMethods``1(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)
-  name.vb: ExtensionMethods(Of T)(AppDomain, Type, String, Type(), String, String)
-  fullName: CG.Reflection.AppDomainExtensions.ExtensionMethods<T>(System.AppDomain, System.Type, System.String, System.Type[], System.String, System.String)
-  fullName.vb: CG.Reflection.AppDomainExtensions.ExtensionMethods(Of T)(System.AppDomain, System.Type, System.String, System.Type(), System.String, System.String)
-  nameWithType: AppDomainExtensions.ExtensionMethods<T>(AppDomain, Type, String, Type[], String, String)
-  nameWithType.vb: AppDomainExtensions.ExtensionMethods(Of T)(AppDomain, Type, String, Type(), String, String)
-- uid: CG.Reflection.AppDomainExtensions.ExtensionMethods``2(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)
-  name: ExtensionMethods<T1, T2>(AppDomain, Type, String, Type[], String, String)
-  href: api/CG.Reflection.AppDomainExtensions.html#CG_Reflection_AppDomainExtensions_ExtensionMethods__2_System_AppDomain_System_Type_System_String_System_Type___System_String_System_String_
-  commentId: M:CG.Reflection.AppDomainExtensions.ExtensionMethods``2(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)
-  name.vb: ExtensionMethods(Of T1, T2)(AppDomain, Type, String, Type(), String, String)
-  fullName: CG.Reflection.AppDomainExtensions.ExtensionMethods<T1, T2>(System.AppDomain, System.Type, System.String, System.Type[], System.String, System.String)
-  fullName.vb: CG.Reflection.AppDomainExtensions.ExtensionMethods(Of T1, T2)(System.AppDomain, System.Type, System.String, System.Type(), System.String, System.String)
-  nameWithType: AppDomainExtensions.ExtensionMethods<T1, T2>(AppDomain, Type, String, Type[], String, String)
-  nameWithType.vb: AppDomainExtensions.ExtensionMethods(Of T1, T2)(AppDomain, Type, String, Type(), String, String)
 - uid: CG.Reflection.AssemblyExtensions
   name: AssemblyExtensions
   href: api/CG.Reflection.AssemblyExtensions.html
@@ -192,6 +152,46 @@ references:
   isSpec: "True"
   fullName: CG.Reflection.PropertyCache.Item
   nameWithType: PropertyCache.Item
+- uid: CG.Reflection.ReflectionAppDomainExtensions
+  name: ReflectionAppDomainExtensions
+  href: api/CG.Reflection.ReflectionAppDomainExtensions.html
+  commentId: T:CG.Reflection.ReflectionAppDomainExtensions
+  fullName: CG.Reflection.ReflectionAppDomainExtensions
+  nameWithType: ReflectionAppDomainExtensions
+- uid: CG.Reflection.ReflectionAppDomainExtensions.ExtensionMethods(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)
+  name: ExtensionMethods(AppDomain, Type, String, Type[], String, String)
+  href: api/CG.Reflection.ReflectionAppDomainExtensions.html#CG_Reflection_ReflectionAppDomainExtensions_ExtensionMethods_System_AppDomain_System_Type_System_String_System_Type___System_String_System_String_
+  commentId: M:CG.Reflection.ReflectionAppDomainExtensions.ExtensionMethods(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)
+  name.vb: ExtensionMethods(AppDomain, Type, String, Type(), String, String)
+  fullName: CG.Reflection.ReflectionAppDomainExtensions.ExtensionMethods(System.AppDomain, System.Type, System.String, System.Type[], System.String, System.String)
+  fullName.vb: CG.Reflection.ReflectionAppDomainExtensions.ExtensionMethods(System.AppDomain, System.Type, System.String, System.Type(), System.String, System.String)
+  nameWithType: ReflectionAppDomainExtensions.ExtensionMethods(AppDomain, Type, String, Type[], String, String)
+  nameWithType.vb: ReflectionAppDomainExtensions.ExtensionMethods(AppDomain, Type, String, Type(), String, String)
+- uid: CG.Reflection.ReflectionAppDomainExtensions.ExtensionMethods*
+  name: ExtensionMethods
+  href: api/CG.Reflection.ReflectionAppDomainExtensions.html#CG_Reflection_ReflectionAppDomainExtensions_ExtensionMethods_
+  commentId: Overload:CG.Reflection.ReflectionAppDomainExtensions.ExtensionMethods
+  isSpec: "True"
+  fullName: CG.Reflection.ReflectionAppDomainExtensions.ExtensionMethods
+  nameWithType: ReflectionAppDomainExtensions.ExtensionMethods
+- uid: CG.Reflection.ReflectionAppDomainExtensions.ExtensionMethods``1(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)
+  name: ExtensionMethods<T>(AppDomain, Type, String, Type[], String, String)
+  href: api/CG.Reflection.ReflectionAppDomainExtensions.html#CG_Reflection_ReflectionAppDomainExtensions_ExtensionMethods__1_System_AppDomain_System_Type_System_String_System_Type___System_String_System_String_
+  commentId: M:CG.Reflection.ReflectionAppDomainExtensions.ExtensionMethods``1(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)
+  name.vb: ExtensionMethods(Of T)(AppDomain, Type, String, Type(), String, String)
+  fullName: CG.Reflection.ReflectionAppDomainExtensions.ExtensionMethods<T>(System.AppDomain, System.Type, System.String, System.Type[], System.String, System.String)
+  fullName.vb: CG.Reflection.ReflectionAppDomainExtensions.ExtensionMethods(Of T)(System.AppDomain, System.Type, System.String, System.Type(), System.String, System.String)
+  nameWithType: ReflectionAppDomainExtensions.ExtensionMethods<T>(AppDomain, Type, String, Type[], String, String)
+  nameWithType.vb: ReflectionAppDomainExtensions.ExtensionMethods(Of T)(AppDomain, Type, String, Type(), String, String)
+- uid: CG.Reflection.ReflectionAppDomainExtensions.ExtensionMethods``2(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)
+  name: ExtensionMethods<T1, T2>(AppDomain, Type, String, Type[], String, String)
+  href: api/CG.Reflection.ReflectionAppDomainExtensions.html#CG_Reflection_ReflectionAppDomainExtensions_ExtensionMethods__2_System_AppDomain_System_Type_System_String_System_Type___System_String_System_String_
+  commentId: M:CG.Reflection.ReflectionAppDomainExtensions.ExtensionMethods``2(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)
+  name.vb: ExtensionMethods(Of T1, T2)(AppDomain, Type, String, Type(), String, String)
+  fullName: CG.Reflection.ReflectionAppDomainExtensions.ExtensionMethods<T1, T2>(System.AppDomain, System.Type, System.String, System.Type[], System.String, System.String)
+  fullName.vb: CG.Reflection.ReflectionAppDomainExtensions.ExtensionMethods(Of T1, T2)(System.AppDomain, System.Type, System.String, System.Type(), System.String, System.String)
+  nameWithType: ReflectionAppDomainExtensions.ExtensionMethods<T1, T2>(AppDomain, Type, String, Type[], String, String)
+  nameWithType.vb: ReflectionAppDomainExtensions.ExtensionMethods(Of T1, T2)(AppDomain, Type, String, Type(), String, String)
 - uid: CG.Reflection.Services
   name: CG.Reflection.Services
   href: api/CG.Reflection.Services.html

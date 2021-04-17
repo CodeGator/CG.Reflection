@@ -14,23 +14,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/CG.Reflection.AppDomainExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Reflection.AppDomainExtensions.html",
-          "hash": "ultrEp1yNMV7qzMhpnALQ04RBpTofLUxJvqxrhEFp7c="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/CG.Reflection.AssemblyExtensions.yml",
       "output": {
         ".html": {
           "relative_path": "api/CG.Reflection.AssemblyExtensions.html",
-          "hash": "ziw2hXnFPx6vPA2F6DlsP3pjVjqkJUhNOSk910OVeZo="
+          "hash": "igLUp42btcj1romGmevTwg29NV3aY5M/S5W+fPPzUKA="
         }
       },
       "is_incremental": false,
@@ -42,7 +30,19 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Reflection.PropertyCache.html",
-          "hash": "TyiZHvv0d0eCmQWNrVQ5hdNoZ/oNoytGh/zc06cw4Rk="
+          "hash": "+C3OHKCByhYC+HA91T373v5IdTnG3aYrxOmeeNQpX30="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Reflection.ReflectionAppDomainExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Reflection.ReflectionAppDomainExtensions.html",
+          "hash": "gIM6gBljzsbcdNapLnYSoN13H8DkKMJ/RsKLI/AFCSU="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Reflection.Services.IPackageInfo.html",
-          "hash": "kxea2QJIfVp1vAFFcWMdxoXVOX5oCWA+fbGpM3YgdTY="
+          "hash": "nN9N2uCSXUlelDvphF2isEs9gYo1tkPK41uJBCSI/58="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Reflection.Services.IPackageService.html",
-          "hash": "n4ODwbywLgLWW0MZkjae8iuyFBpmw1zajnbF/tmT7Jw="
+          "hash": "F150YuV2odNT2UrQxu5MMvg27QX+IHure41CX5mrdig="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Reflection.Services.PackageService.html",
-          "hash": "TvPQ6duQu5XwfZThZw47Cs+SUfWLAxOtww1u2XbQybE="
+          "hash": "fO/t8XwMffrL8tbnMSWZFL7uKVS15gEqFVVM71J0EqQ="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Reflection.Services.html",
-          "hash": "2eBGnEby054YKjirfK3pmaQ6MBKs0pKQlp3h9cvM1vo="
+          "hash": "T1tonCulWYIgpadTlZpGW7SO6+grAW0g0xNCVN00yao="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Reflection.html",
-          "hash": "d/b0e8t1Kjd2WduK7FGY652/FiO4T/LpN7YJYWbm3qU="
+          "hash": "qChB5Rz8bRVwN3crlDlV5+8AoCNkwQsSr2Xx6+eEAK8="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "ha4aE4COGpzewgRamZDbHuI7g44+DHJavJW4q50lZbY="
+          "hash": "mIGq6MN1+9d74YgASjE2Zbhjaae5Yi7RhfyjQoXNYjQ="
         }
       },
       "is_incremental": false,
@@ -126,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "SqNqvSf8//GNTI6UPykCtCUenzrfidVuZs6zDLbIMLk="
+          "hash": "UnrhK+uObIkO/9G/+GcoKcAC7xvG4eZ+JzQbq46ADSg="
         }
       },
       "is_incremental": false,
@@ -138,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "dajSEgtAs/v7CK5L21qL4vHgTdyUv0J7McsQOIiZpLA="
+          "hash": "gcp1JB3/cLklcT+72krfnba+6CuoFkaQtheZ9cEBdjQ="
         }
       },
       "is_incremental": false,
@@ -206,7 +206,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "DoaXMMjlR4SaDAnT9Bp6/FlDJKdwFhnXectkuV2BEGI="
+          "hash": "ZVPwD/7hJhXyu3fKG3yKeba6Bpkx5+balOvischmmE4="
         }
       },
       "is_incremental": false,
