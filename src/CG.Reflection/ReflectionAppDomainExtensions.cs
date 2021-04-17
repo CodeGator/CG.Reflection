@@ -2,7 +2,6 @@
 using CG.Validations;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -13,9 +12,9 @@ namespace CG.Reflection
 {
     /// <summary>
     /// This class contains extension methods related to the <see cref="AppDomain"/>
-    /// type.
+    /// type, for registering types related to reflection.
     /// </summary>
-    public static partial class AppDomainExtensions
+    public static partial class ReflectionAppDomainExtensions
     {
         // *******************************************************************
         // Public methods.
