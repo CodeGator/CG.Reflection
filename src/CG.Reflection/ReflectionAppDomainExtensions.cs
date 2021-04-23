@@ -67,7 +67,7 @@ namespace CG.Reflection
                 // Look for assemblies in the white list we might need to load.
                 var toLoad = assemblyWhiteList.Split(',').Where(
                     x => assemblies.Any(y => !y.GetName().Name.IsMatch(x))
-                    );
+                    ).ToList();
 
                 // Did we find any?
                 if (toLoad.Any())
@@ -79,7 +79,9 @@ namespace CG.Reflection
                         var files = Directory.GetFiles(
                             AppDomain.CurrentDomain.BaseDirectory,
                             x.EndsWith(".dll") ? x : $"{x}.dll"
-                            );
+                            ).ToList();
+
+                        // Loop through the files.
                         foreach (var file in files)
                         {
                             try
@@ -146,7 +148,7 @@ namespace CG.Reflection
                     x.IsClass && x.IsPublic && 
                     x.IsSealed && !x.IsNested && 
                     !x.IsGenericType
-                    );
+                    ).ToList();
 
                 // Loop through each matching type.
                 foreach (var type in types)
@@ -160,7 +162,7 @@ namespace CG.Reflection
                             x.Name == methodName && 
                             x.IsDefined(typeof(ExtensionAttribute), false) &&
                             !x.ContainsGenericParameters
-                            );
+                            ).ToList();
 
                     // Loop through the results.
                     foreach (var method in typeMethods)
