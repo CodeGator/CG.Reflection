@@ -14,7 +14,7 @@ namespace CG.Reflection
     /// This class contains extension methods related to the <see cref="AppDomain"/>
     /// type, for registering types related to reflection.
     /// </summary>
-    public static partial class ReflectionAppDomainExtensions
+    public static partial class AppDomainExtensions
     {
         // *******************************************************************
         // Public methods.
@@ -168,7 +168,7 @@ namespace CG.Reflection
                     foreach (var method in typeMethods)
                     {
                         // Get the parameter info.
-                        var pi = method.GetParameters();
+                        var pi = method.GetParameters().ToArray();
 
                         // Get the LHS of the comparison.
                         var lhs = pi.Select(x => x.ParameterType).ToArray();
@@ -274,7 +274,7 @@ namespace CG.Reflection
                 // Look for assemblies in the white list we might need to load.
                 var toLoad = assemblyWhiteList.Split(',').Where(
                     x => assemblies.Any(y => !y.GetName().Name.IsMatch(x))
-                    );
+                    ).ToList();
 
                 // Did we find any?
                 if (toLoad.Any())
@@ -286,7 +286,7 @@ namespace CG.Reflection
                         var files = Directory.GetFiles(
                             AppDomain.CurrentDomain.BaseDirectory,
                             x.EndsWith(".dll") ? x : $"{x}.dll"
-                            );
+                            ).ToList();
 
                         // Loop through the files.
                         foreach (var file in files)
@@ -320,7 +320,7 @@ namespace CG.Reflection
             if (!string.IsNullOrEmpty(assemblyBlackList))
             {
                 // Split the black list into parts.
-                var blackParts = assemblyBlackList.Split(',');
+                var blackParts = assemblyBlackList.Split(',').ToArray();
 
                 // Filter out anything that doesn't belong.
                 assemblies = assemblies.ApplyBlackList(
@@ -354,7 +354,7 @@ namespace CG.Reflection
                 var types = assembly.GetTypes().Where(x => 
                         x.IsClass && x.IsPublic &&
                         x.IsSealed && !x.IsNested
-                        );
+                        ).ToList();
                                    
                 // Loop through each matching type.
                 foreach (var type in types)
@@ -367,13 +367,13 @@ namespace CG.Reflection
                             x.Name == methodName && 
                             x.IsDefined(typeof(ExtensionAttribute), false) &&
                             x.ContainsGenericParameters
-                            );
+                            ).ToList();
 
                     // Loop through any methods we find.
                     foreach (var method in typeMethods)
                     {
                         // Get the generic type arguments.
-                        var genArgs = method.GetGenericArguments();
+                        var genArgs = method.GetGenericArguments().ToArray();
                         
                         // Do the type args counts match?
                         if (1 != genArgs.Length)
@@ -389,7 +389,7 @@ namespace CG.Reflection
                         }
 
                         // Get the parameter info.
-                        var pi = method.GetParameters();
+                        var pi = method.GetParameters().ToArray();
 
                         // Get the LHS of the comparison.
                         var lhs = pi.Select(x => x.ParameterType).ToArray();
@@ -487,7 +487,7 @@ namespace CG.Reflection
                 // Look for assemblies in the white list we might need to load.
                 var toLoad = assemblyWhiteList.Split(',').Where(
                     x => assemblies.Any(y => !y.GetName().Name.IsMatch(x))
-                    );
+                    ).ToList();
 
                 // Did we find any?
                 if (toLoad.Any())
@@ -499,7 +499,7 @@ namespace CG.Reflection
                         var files = Directory.GetFiles(
                             AppDomain.CurrentDomain.BaseDirectory,
                             x.EndsWith(".dll") ? x : $"{x}.dll"
-                            );
+                            ).ToList();
 
                         // Loop through the files.
                         foreach (var file in files)
@@ -567,7 +567,7 @@ namespace CG.Reflection
                 var types = assembly.GetTypes().Where(x =>
                         x.IsClass && x.IsPublic &&
                         x.IsSealed && !x.IsNested
-                        );
+                        ).ToList();
 
                 // Loop through each matching type.
                 foreach (var type in types)
@@ -580,13 +580,13 @@ namespace CG.Reflection
                             x.Name == methodName &&
                             x.IsDefined(typeof(ExtensionAttribute), false) &&
                             x.ContainsGenericParameters
-                            );
+                            ).ToList();
 
                     // Loop through any methods we find.
                     foreach (var method in typeMethods)
                     {
                         // Get the generic type arguments.
-                        var genArgs = method.GetGenericArguments();
+                        var genArgs = method.GetGenericArguments().ToArray();
 
                         // Do the type args counts match?
                         if (2 != genArgs.Length)
@@ -603,7 +603,7 @@ namespace CG.Reflection
                         }
 
                         // Get the parameter info.
-                        var pi = method.GetParameters();
+                        var pi = method.GetParameters().ToArray();
 
                         // Get the LHS of the comparison.
                         var lhs = pi.Select(x => x.ParameterType).ToArray();

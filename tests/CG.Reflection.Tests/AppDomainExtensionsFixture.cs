@@ -63,7 +63,7 @@ namespace CG.Reflection
     }
 
     /// <summary>
-    /// This class is a test fixture for the <see cref="AppDomainExtensions"/>
+    /// This class is a test fixture for the <see cref="CG.AppDomainExtensions"/>
     /// class.
     /// </summary>
     [TestClass]
@@ -77,7 +77,7 @@ namespace CG.Reflection
         #region Public methods
 
         /// <summary>
-        /// This method verifies that the <see cref="AppDomainExtensions.ExtensionMethods(AppDomain, Type, string, Type[], string, string)"/>
+        /// This method verifies that the <see cref="CG.AppDomainExtensions.ExtensionMethods(AppDomain, Type, string, Type[], string, string)"/>
         /// method can locate a test extension method with no parameters.
         /// </summary>
         [TestMethod]
@@ -98,7 +98,7 @@ namespace CG.Reflection
         // *******************************************************************
 
         /// <summary>
-        /// This method verifies that the <see cref="AppDomainExtensions.ExtensionMethods(AppDomain, Type, string, Type[], string, string)"/>
+        /// This method verifies that the <see cref="CG.AppDomainExtensions.ExtensionMethods(AppDomain, Type, string, Type[], string, string)"/>
         /// method can locate a test extension method with parameters.
         /// </summary>
         [TestMethod]
@@ -120,7 +120,7 @@ namespace CG.Reflection
         // *******************************************************************
 
         /// <summary>
-        /// This method verifies that the <see cref="AppDomainExtensions.ExtensionMethods{T}(AppDomain, Type, string, Type[], string, string)"/>
+        /// This method verifies that the <see cref="CG.AppDomainExtensions.ExtensionMethods{T}(AppDomain, Type, string, Type[], string, string)"/>
         /// method can locate a test extension method with parameters and generic
         /// type arguments.
         /// </summary>
