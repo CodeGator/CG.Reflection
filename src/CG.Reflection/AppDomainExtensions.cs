@@ -59,7 +59,7 @@ namespace CG.Reflection
             }
 
             // Get the list of currently loaded assemblies.
-            var assemblies = AppDomain.CurrentDomain.GetAssemblies().ToList();
+            var assemblies = AppDomain.CurrentDomain.GetAssemblies();
 
             // Was a white list specified?
             if (!string.IsNullOrEmpty(assemblyWhiteList))
@@ -67,7 +67,7 @@ namespace CG.Reflection
                 // Look for assemblies in the white list we might need to load.
                 var toLoad = assemblyWhiteList.Split(',').Where(
                     x => assemblies.Any(y => !y.GetName().Name.IsMatch(x))
-                    ).ToList();
+                    );
 
                 // Did we find any?
                 if (toLoad.Any())
@@ -79,7 +79,7 @@ namespace CG.Reflection
                         var files = Directory.GetFiles(
                             AppDomain.CurrentDomain.BaseDirectory,
                             x.EndsWith(".dll") ? x : $"{x}.dll"
-                            ).ToList();
+                            );
 
                         // Loop through the files.
                         foreach (var file in files)
@@ -96,12 +96,14 @@ namespace CG.Reflection
                     });
 
                     // Get the list of currently loaded assemblies.
-                    assemblies = AppDomain.CurrentDomain.GetAssemblies().ToList();
+                    assemblies = AppDomain.CurrentDomain
+                        .GetAssemblies();
 
                     // Filter out anything that doesn't belong.
                     assemblies = assemblies.ApplyWhiteList(
-                        x => x.GetName().Name, assemblyWhiteList
-                        ).ToList();
+                        x => x.GetName().Name, 
+                        assemblyWhiteList
+                        ).ToArray();
                 }
 
                 // At this point the assembly list should only contain assemblies 
@@ -117,8 +119,9 @@ namespace CG.Reflection
 
                 // Filter out anything that doesn't belong.
                 assemblies = assemblies.ApplyBlackList(
-                    x => x.GetName().Name, assemblyBlackList
-                    ).ToList();
+                    x => x.GetName().Name, 
+                    assemblyBlackList
+                    ).ToArray();
 
                 // At this point the assembly list should only contains those
                 //   assemblies that are already loaded in the app-domain and/or
@@ -130,25 +133,15 @@ namespace CG.Reflection
 
             var methods = new List<MethodInfo>();
 
-            // Create options for the parallel operation.
-            var options = new ParallelOptions()
-            {
-#if DEBUG
-                MaxDegreeOfParallelism = 1 // <-- to make debugging easier.
-#else
-                MaxDegreeOfParallelism = Environment.ProcessorCount
-#endif
-            };
-
-            // We should be able to conduct the search in parallel.
-            Parallel.ForEach(assemblies, options, (assembly) =>
+            // Loop and search.
+            foreach (var assembly in assemblies)
             {
                 // Look for types that are public, sealed, non-nested, non-generic classes.
                 var types = assembly.GetTypes().Where(x => 
                     x.IsClass && x.IsPublic && 
                     x.IsSealed && !x.IsNested && 
                     !x.IsGenericType
-                    ).ToList();
+                    );
 
                 // Loop through each matching type.
                 foreach (var type in types)
@@ -162,13 +155,13 @@ namespace CG.Reflection
                             x.Name == methodName && 
                             x.IsDefined(typeof(ExtensionAttribute), false) &&
                             !x.ContainsGenericParameters
-                            ).ToList();
+                            );
 
                     // Loop through the results.
                     foreach (var method in typeMethods)
                     {
                         // Get the parameter info.
-                        var pi = method.GetParameters().ToArray();
+                        var pi = method.GetParameters();
 
                         // Get the LHS of the comparison.
                         var lhs = pi.Select(x => x.ParameterType).ToArray();
@@ -220,7 +213,7 @@ namespace CG.Reflection
                         }
                     }
                 }
-            });
+            }
 
             // Return the results.
             return methods;
@@ -266,7 +259,7 @@ namespace CG.Reflection
             }
 
             // Get the list of currently loaded assemblies.
-            var assemblies = AppDomain.CurrentDomain.GetAssemblies().ToList();
+            var assemblies = AppDomain.CurrentDomain.GetAssemblies();
 
             // Was a white list specified?
             if (!string.IsNullOrEmpty(assemblyWhiteList))
@@ -274,7 +267,7 @@ namespace CG.Reflection
                 // Look for assemblies in the white list we might need to load.
                 var toLoad = assemblyWhiteList.Split(',').Where(
                     x => assemblies.Any(y => !y.GetName().Name.IsMatch(x))
-                    ).ToList();
+                    );
 
                 // Did we find any?
                 if (toLoad.Any())
@@ -286,7 +279,7 @@ namespace CG.Reflection
                         var files = Directory.GetFiles(
                             AppDomain.CurrentDomain.BaseDirectory,
                             x.EndsWith(".dll") ? x : $"{x}.dll"
-                            ).ToList();
+                            );
 
                         // Loop through the files.
                         foreach (var file in files)
@@ -303,12 +296,12 @@ namespace CG.Reflection
                     });
 
                     // Get the list of currently loaded assemblies.
-                    assemblies = AppDomain.CurrentDomain.GetAssemblies().ToList();
+                    assemblies = AppDomain.CurrentDomain.GetAssemblies();
 
                     // Filter out anything that doesn't belong.
                     assemblies = assemblies.ApplyWhiteList(
                         x => x.GetName().Name, assemblyWhiteList
-                        ).ToList();
+                        ).ToArray();
                 }
 
                 // At this point the assembly list should only contain assemblies 
@@ -325,7 +318,7 @@ namespace CG.Reflection
                 // Filter out anything that doesn't belong.
                 assemblies = assemblies.ApplyBlackList(
                     x => x.GetName().Name, assemblyBlackList
-                    ).ToList();
+                    ).ToArray();
 
                 // At this point the assembly list should only contains those
                 //   assemblies that are already loaded in the app-domain and/or
@@ -337,24 +330,14 @@ namespace CG.Reflection
 
             var methods = new List<MethodInfo>();
 
-            // Create options for the parallel operation.
-            var options = new ParallelOptions()
-            {
-#if DEBUG
-                MaxDegreeOfParallelism = 1 // <-- to make debugging easier.
-#else
-                MaxDegreeOfParallelism = Environment.ProcessorCount
-#endif
-            };
-
-            // We should be able to conduct the search in parallel.
-            Parallel.ForEach(assemblies, options, (assembly) =>
+            // Loop and search.
+            foreach (var assembly in assemblies)
             {
                 // Look for types that are public, sealed and non-nested.
                 var types = assembly.GetTypes().Where(x => 
                         x.IsClass && x.IsPublic &&
                         x.IsSealed && !x.IsNested
-                        ).ToList();
+                        );
                                    
                 // Loop through each matching type.
                 foreach (var type in types)
@@ -367,13 +350,13 @@ namespace CG.Reflection
                             x.Name == methodName && 
                             x.IsDefined(typeof(ExtensionAttribute), false) &&
                             x.ContainsGenericParameters
-                            ).ToList();
+                            );
 
                     // Loop through any methods we find.
                     foreach (var method in typeMethods)
                     {
                         // Get the generic type arguments.
-                        var genArgs = method.GetGenericArguments().ToArray();
+                        var genArgs = method.GetGenericArguments();
                         
                         // Do the type args counts match?
                         if (1 != genArgs.Length)
@@ -389,7 +372,7 @@ namespace CG.Reflection
                         }
 
                         // Get the parameter info.
-                        var pi = method.GetParameters().ToArray();
+                        var pi = method.GetParameters();
 
                         // Get the LHS of the comparison.
                         var lhs = pi.Select(x => x.ParameterType).ToArray();
@@ -432,7 +415,7 @@ namespace CG.Reflection
                         }
                     }
                 }
-            });
+            }
 
             // Return the results.
             return methods;
@@ -479,7 +462,7 @@ namespace CG.Reflection
             }
 
             // Get the list of currently loaded assemblies.
-            var assemblies = AppDomain.CurrentDomain.GetAssemblies().ToList();
+            var assemblies = AppDomain.CurrentDomain.GetAssemblies();
 
             // Was a white list specified?
             if (!string.IsNullOrEmpty(assemblyWhiteList))
@@ -487,7 +470,7 @@ namespace CG.Reflection
                 // Look for assemblies in the white list we might need to load.
                 var toLoad = assemblyWhiteList.Split(',').Where(
                     x => assemblies.Any(y => !y.GetName().Name.IsMatch(x))
-                    ).ToList();
+                    );
 
                 // Did we find any?
                 if (toLoad.Any())
@@ -499,7 +482,7 @@ namespace CG.Reflection
                         var files = Directory.GetFiles(
                             AppDomain.CurrentDomain.BaseDirectory,
                             x.EndsWith(".dll") ? x : $"{x}.dll"
-                            ).ToList();
+                            );
 
                         // Loop through the files.
                         foreach (var file in files)
@@ -516,12 +499,13 @@ namespace CG.Reflection
                     });
 
                     // Get the list of currently loaded assemblies.
-                    assemblies = AppDomain.CurrentDomain.GetAssemblies().ToList();
+                    assemblies = AppDomain.CurrentDomain.GetAssemblies();
 
                     // Filter out anything that doesn't belong.
                     assemblies = assemblies.ApplyWhiteList(
-                        x => x.GetName().Name, assemblyWhiteList
-                        ).ToList();
+                        x => x.GetName().Name, 
+                        assemblyWhiteList
+                        ).ToArray();
                 }
 
                 // At this point the assembly list should only contain assemblies 
@@ -537,8 +521,9 @@ namespace CG.Reflection
 
                 // Filter out anything that doesn't belong.
                 assemblies = assemblies.ApplyBlackList(
-                    x => x.GetName().Name, assemblyBlackList
-                    ).ToList();
+                    x => x.GetName().Name, 
+                    assemblyBlackList
+                    ).ToArray();
 
                 // At this point the assembly list should only contains those
                 //   assemblies that are already loaded in the app-domain and/or
@@ -550,24 +535,14 @@ namespace CG.Reflection
 
             var methods = new List<MethodInfo>();
 
-            // Create options for the parallel operation.
-            var options = new ParallelOptions()
-            {
-#if DEBUG
-                MaxDegreeOfParallelism = 1 // <-- to make debugging easier.
-#else
-                MaxDegreeOfParallelism = Environment.ProcessorCount
-#endif
-            };
-
-            // We should be able to conduct the search in parallel.
-            Parallel.ForEach(assemblies, options, (assembly) =>
+            // Loop and search.
+            foreach (var assembly in assemblies)
             {
                 // Look for types that are public, sealed and non-nested.
                 var types = assembly.GetTypes().Where(x =>
                         x.IsClass && x.IsPublic &&
                         x.IsSealed && !x.IsNested
-                        ).ToList();
+                        );
 
                 // Loop through each matching type.
                 foreach (var type in types)
@@ -580,13 +555,13 @@ namespace CG.Reflection
                             x.Name == methodName &&
                             x.IsDefined(typeof(ExtensionAttribute), false) &&
                             x.ContainsGenericParameters
-                            ).ToList();
+                            );
 
                     // Loop through any methods we find.
                     foreach (var method in typeMethods)
                     {
                         // Get the generic type arguments.
-                        var genArgs = method.GetGenericArguments().ToArray();
+                        var genArgs = method.GetGenericArguments();
 
                         // Do the type args counts match?
                         if (2 != genArgs.Length)
@@ -603,7 +578,7 @@ namespace CG.Reflection
                         }
 
                         // Get the parameter info.
-                        var pi = method.GetParameters().ToArray();
+                        var pi = method.GetParameters();
 
                         // Get the LHS of the comparison.
                         var lhs = pi.Select(x => x.ParameterType).ToArray();
@@ -646,7 +621,7 @@ namespace CG.Reflection
                         }
                     }
                 }
-            });
+            }
 
             // Return the results.
             return methods;
