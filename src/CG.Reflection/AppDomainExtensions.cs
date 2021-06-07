@@ -189,7 +189,7 @@ namespace CG.Reflection
                         for (int z = 0; z < lhs.Length; z++)
                         {
                             // Are the arg types not assignable?
-                            if (false == lhs[z].IsAssignableFrom(rhs[z]))
+                            if (false == lhs[z].IsAssignableTo(rhs[z]))
                             {
                                 // Nope, we don't want this method.
                                 shouldAdd = false;
