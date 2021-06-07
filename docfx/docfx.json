@@ -5,7 +5,7 @@
         {
 		  "src" : "..",
           "files": [
-            "src/CG.Reflection/**.csproj"
+            "src/*/**.csproj"
           ]
         }
       ],
