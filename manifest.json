@@ -25,15 +25,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "+teA3hPxp9UAWKuIigqwoKQbZFO0lzkqXZxKHGu2+n8="
+          "hash": "53cDPdjyKTmYSaPMwcMYYJO/bYpeY21eGi/JWyVQBqE="
         }
       },
       "is_incremental": false,
@@ -120,15 +117,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "dKYvsgplmOAekcRawnm4NJba9Z5TfG/XLtOAPdx+GVg="
+          "hash": "N1dQU1gPihMQG2usKvqsHLfU6OtKWh/EiQaU8mJvy8I="
         }
       },
       "is_incremental": false,
