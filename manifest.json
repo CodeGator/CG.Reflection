@@ -14,6 +14,33 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "qmDz8ga3mWTWm3i5EL3tggh/GfxQ2V0QLhMK74C3Jlk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "+teA3hPxp9UAWKuIigqwoKQbZFO0lzkqXZxKHGu2+n8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/intro.md",
       "output": {
         ".html": {
@@ -93,6 +120,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
@@ -119,7 +149,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 2,
+          "total_file_count": 3,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
