@@ -6,6 +6,7 @@
 [![NuGet downloads](https://img.shields.io/nuget/dt/CG.Reflection.svg?style=flat)](https://nuget.org/packages/CG.Reflection)
 ![Azure DevOps coverage](https://img.shields.io/azure-devops/coverage/codegator/CG.Reflection/15)
 [![Github discussion](https://img.shields.io/badge/Discussion-online-blue)](https://github.com/CodeGator/CG.Blazor/discussions)
+[![CG.Reflection on fuget.org](https://www.fuget.org/packages/CG.Reflection/badge.svg)](https://www.fuget.org/packages/CG.Reflection)
 
 #### What does it do?
 The package contains general purpose reflection classes used by other CodeGator packages.
@@ -23,6 +24,8 @@ If you've spotted a bug in the code please use the project Issues [HERE](https:/
 
 #### Should I use this package in my project?
 This codebase changes, often, so it may not be the best choice for a production project. 
+
+We have a discussion group [HERE](https://github.com/CodeGator/CG.Blazor/discussions)
 
 #### Is there any documentation?
 There is developer documentation [HERE](https://codegator.github.io/CG.Reflection/)
