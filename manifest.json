@@ -13,12 +13,108 @@
       "is_incremental": false
     },
     {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Reflection.AppDomainExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Reflection.AppDomainExtensions.html",
+          "hash": "UnRFbrO6ni8+EmxYmCoxDYXNtQVhNpUNAPuywZ00LA8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Reflection.AssemblyExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Reflection.AssemblyExtensions.html",
+          "hash": "j978A/zph2u1JPjYh/3O8OMGDl7JKQekmzndcd2NsjA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Reflection.PropertyCache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Reflection.PropertyCache.html",
+          "hash": "48krm7HHU7Xu9AMvMozOdI/yll47ooFsr3eO9NqyMpM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Reflection.Services.IPackageInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Reflection.Services.IPackageInfo.html",
+          "hash": "mnz86QXCGiqZwrcobfcLrIRt49DudjooNSQsu197Das="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Reflection.Services.IPackageService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Reflection.Services.IPackageService.html",
+          "hash": "gHVWgAzuLFBqN294sZM6Juyqp8CnJy8LLN1NK2wa2jQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Reflection.Services.PackageService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Reflection.Services.PackageService.html",
+          "hash": "+fyAmrzPyOBonLcxJGFYlBtrGtUcVpdAGkWs4uU5NAI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Reflection.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Reflection.Services.html",
+          "hash": "zTTN/JPyVgcwCOvEYR5CgAbxtwE0NC4OvIIc/tU+Smw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Reflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Reflection.html",
+          "hash": "fssh6Dz9XKoP/V7pqtqbC11V1PCq1u66DPeOmvDgQo0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "qmDz8ga3mWTWm3i5EL3tggh/GfxQ2V0QLhMK74C3Jlk="
+          "hash": "gdXTGrY8poWbt3vaDfMsohVOgFoMCHm49fIEA4e4+Po="
         }
       },
       "is_incremental": false,
@@ -30,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "53cDPdjyKTmYSaPMwcMYYJO/bYpeY21eGi/JWyVQBqE="
+          "hash": "SqNqvSf8//GNTI6UPykCtCUenzrfidVuZs6zDLbIMLk="
         }
       },
       "is_incremental": false,
@@ -42,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "OgOIdp+68sKjWkO8X7/eMKamv9SPvmhi1lIB7IfCk/4="
+          "hash": "3lFGsZn+vpYCWz7OututIOBGsz91XMn2mjINvNxc584="
         }
       },
       "is_incremental": false,
@@ -110,7 +206,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "UBKjNGtn63efOULJlTlaQq5KiAb425l/cK+B7Hoo0sE="
+          "hash": "gAWfkB6g/RCmTlcb+SiTg6fdvSyUJpD9mrb8Af2iSio="
         }
       },
       "is_incremental": false,
@@ -122,7 +218,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "N1dQU1gPihMQG2usKvqsHLfU6OtKWh/EiQaU8mJvy8I="
+          "hash": "Rt1U32e4/UACWXf+9K+R7En1GASRezw993oxSTeG3vo="
         }
       },
       "is_incremental": false,
@@ -144,6 +240,12 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 8,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
