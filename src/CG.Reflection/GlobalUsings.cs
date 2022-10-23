@@ -1,0 +1,10 @@
+﻿global using CG;
+global using CG.Collections.Generic;
+global using CG.Validations;
+global using System;
+global using System.Collections.Generic;
+global using System.IO;
+global using System.Linq;
+global using System.Reflection;
+global using System.Runtime.CompilerServices;
+global using System.Runtime.InteropServices;

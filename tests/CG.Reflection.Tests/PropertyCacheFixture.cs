@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading.Tasks;
 using CG.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

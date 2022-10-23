@@ -1,37 +1,7 @@
-﻿#region File header
-/*****************************************************************************
-  Copyright © by CODEGATOR. All rights reserved.
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy 
-  of this software and associated documentation files (the "Software"), to 
-  deal in the Software without restriction, including without limitation the 
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or 
-  sell copies of the Software, and to permit persons to whom the Software is 
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in 
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN 
-  THE SOFTWARE.
-   
-  Have Fun! :o)
-*****************************************************************************/
-#endregion
-
-#region Using directives
-
-using System;
+﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-#endregion
-
-namespace CG.Reflection
+namespace CG.Reflection.Extensions
 {
     public class A { }
     public class B : A { }
@@ -63,7 +33,7 @@ namespace CG.Reflection
     }
 
     /// <summary>
-    /// This class is a test fixture for the <see cref="CG.AppDomainExtensions"/>
+    /// This class is a test fixture for the <see cref="AppDomainExtensions"/>
     /// class.
     /// </summary>
     [TestClass]
@@ -77,7 +47,7 @@ namespace CG.Reflection
         #region Public methods
 
         /// <summary>
-        /// This method verifies that the <see cref="CG.AppDomainExtensions.ExtensionMethods(AppDomain, Type, string, Type[], string, string)"/>
+        /// This method verifies that the <see cref="AppDomainExtensions.ExtensionMethods(AppDomain, Type, string, Type[], string, string)"/>
         /// method can locate a test extension method with no parameters.
         /// </summary>
         [TestMethod]
@@ -98,7 +68,7 @@ namespace CG.Reflection
         // *******************************************************************
 
         /// <summary>
-        /// This method verifies that the <see cref="CG.AppDomainExtensions.ExtensionMethods(AppDomain, Type, string, Type[], string, string)"/>
+        /// This method verifies that the <see cref="AppDomainExtensions.ExtensionMethods(AppDomain, Type, string, Type[], string, string)"/>
         /// method can locate a test extension method with parameters.
         /// </summary>
         [TestMethod]
@@ -120,7 +90,7 @@ namespace CG.Reflection
         // *******************************************************************
 
         /// <summary>
-        /// This method verifies that the <see cref="CG.AppDomainExtensions.ExtensionMethods{T}(AppDomain, Type, string, Type[], string, string)"/>
+        /// This method verifies that the <see cref="AppDomainExtensions.ExtensionMethods{T}(AppDomain, Type, string, Type[], string, string)"/>
         /// method can locate a test extension method with parameters and generic
         /// type arguments.
         /// </summary>
@@ -134,7 +104,7 @@ namespace CG.Reflection
                 typeof(int),
                 "TestMethod3",
                 new Type[] { typeof(string) }
-                );           
+                );
 
             // Assert ...
             Assert.IsTrue(result != null, "method returned an invalid value.");
