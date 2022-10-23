@@ -14,30 +14,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/CG.Reflection.AppDomainExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Reflection.AppDomainExtensions.html",
-          "hash": "PPIgOZVECp/cL4eN/JEd23F8+b06f7Jhy9tZEJErwnU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CG.Reflection.AssemblyExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Reflection.AssemblyExtensions.html",
-          "hash": "/ZuRg/oEDh7Ay9isUBlDrFKLybSpu92BcouJXCKyd30="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/CG.Reflection.PropertyCache.yml",
       "output": {
         ".html": {
@@ -102,7 +78,55 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Reflection.html",
-          "hash": "CkCFpI62j5w9sKlAK5O5pAQ31arG7uDVEJvcLrdDxTI="
+          "hash": "nfGHZKfwNqy6eO+ZzyeYhRM2hKqPQ/rOI9iu/1Ik3Fg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/System.AppDomainExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/System.AppDomainExtensions.html",
+          "hash": "gyPF7Z42LRet0vJ0jJkpAzEvhhA3ZfZoejjY4qktypg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/System.Reflection.AssemblyExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/System.Reflection.AssemblyExtensions.html",
+          "hash": "vSp9zwBi1x/dPY8VZWZ1CZ4Vdef6YU3HDjml26zQz6E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/System.Reflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/System.Reflection.html",
+          "hash": "sFzXN41bekzXsfP49VUfGMbXAL3A+61qGg1X0BLNSf8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/System.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/System.html",
+          "hash": "6A9DAe4ZIPXOX/l79FOvB4IUWnIML2UWtWmTWa7bIv8="
         }
       },
       "is_incremental": false,
@@ -126,7 +150,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "SqNqvSf8//GNTI6UPykCtCUenzrfidVuZs6zDLbIMLk="
+          "hash": "ZkMySvAht5siISCRNPYO42QABvgSohFg3H3Zqq3tKQs="
         }
       },
       "is_incremental": false,
@@ -245,7 +269,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 8,
+          "total_file_count": 10,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

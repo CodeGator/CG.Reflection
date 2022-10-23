@@ -7,169 +7,6 @@ references:
   commentId: N:CG.Reflection
   fullName: CG.Reflection
   nameWithType: CG.Reflection
-- uid: CG.Reflection.AppDomainExtensions
-  name: AppDomainExtensions
-  href: api/CG.Reflection.AppDomainExtensions.html
-  commentId: T:CG.Reflection.AppDomainExtensions
-  fullName: CG.Reflection.AppDomainExtensions
-  nameWithType: AppDomainExtensions
-- uid: CG.Reflection.AppDomainExtensions.ExtensionMethods(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)
-  name: ExtensionMethods(AppDomain, Type, String, Type[], String, String)
-  href: api/CG.Reflection.AppDomainExtensions.html#CG_Reflection_AppDomainExtensions_ExtensionMethods_System_AppDomain_System_Type_System_String_System_Type___System_String_System_String_
-  commentId: M:CG.Reflection.AppDomainExtensions.ExtensionMethods(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)
-  name.vb: ExtensionMethods(AppDomain, Type, String, Type(), String, String)
-  fullName: CG.Reflection.AppDomainExtensions.ExtensionMethods(System.AppDomain, System.Type, System.String, System.Type[], System.String, System.String)
-  fullName.vb: CG.Reflection.AppDomainExtensions.ExtensionMethods(System.AppDomain, System.Type, System.String, System.Type(), System.String, System.String)
-  nameWithType: AppDomainExtensions.ExtensionMethods(AppDomain, Type, String, Type[], String, String)
-  nameWithType.vb: AppDomainExtensions.ExtensionMethods(AppDomain, Type, String, Type(), String, String)
-- uid: CG.Reflection.AppDomainExtensions.ExtensionMethods*
-  name: ExtensionMethods
-  href: api/CG.Reflection.AppDomainExtensions.html#CG_Reflection_AppDomainExtensions_ExtensionMethods_
-  commentId: Overload:CG.Reflection.AppDomainExtensions.ExtensionMethods
-  isSpec: "True"
-  fullName: CG.Reflection.AppDomainExtensions.ExtensionMethods
-  nameWithType: AppDomainExtensions.ExtensionMethods
-- uid: CG.Reflection.AppDomainExtensions.ExtensionMethods``1(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)
-  name: ExtensionMethods<T>(AppDomain, Type, String, Type[], String, String)
-  href: api/CG.Reflection.AppDomainExtensions.html#CG_Reflection_AppDomainExtensions_ExtensionMethods__1_System_AppDomain_System_Type_System_String_System_Type___System_String_System_String_
-  commentId: M:CG.Reflection.AppDomainExtensions.ExtensionMethods``1(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)
-  name.vb: ExtensionMethods(Of T)(AppDomain, Type, String, Type(), String, String)
-  fullName: CG.Reflection.AppDomainExtensions.ExtensionMethods<T>(System.AppDomain, System.Type, System.String, System.Type[], System.String, System.String)
-  fullName.vb: CG.Reflection.AppDomainExtensions.ExtensionMethods(Of T)(System.AppDomain, System.Type, System.String, System.Type(), System.String, System.String)
-  nameWithType: AppDomainExtensions.ExtensionMethods<T>(AppDomain, Type, String, Type[], String, String)
-  nameWithType.vb: AppDomainExtensions.ExtensionMethods(Of T)(AppDomain, Type, String, Type(), String, String)
-- uid: CG.Reflection.AppDomainExtensions.ExtensionMethods``2(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)
-  name: ExtensionMethods<T1, T2>(AppDomain, Type, String, Type[], String, String)
-  href: api/CG.Reflection.AppDomainExtensions.html#CG_Reflection_AppDomainExtensions_ExtensionMethods__2_System_AppDomain_System_Type_System_String_System_Type___System_String_System_String_
-  commentId: M:CG.Reflection.AppDomainExtensions.ExtensionMethods``2(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)
-  name.vb: ExtensionMethods(Of T1, T2)(AppDomain, Type, String, Type(), String, String)
-  fullName: CG.Reflection.AppDomainExtensions.ExtensionMethods<T1, T2>(System.AppDomain, System.Type, System.String, System.Type[], System.String, System.String)
-  fullName.vb: CG.Reflection.AppDomainExtensions.ExtensionMethods(Of T1, T2)(System.AppDomain, System.Type, System.String, System.Type(), System.String, System.String)
-  nameWithType: AppDomainExtensions.ExtensionMethods<T1, T2>(AppDomain, Type, String, Type[], String, String)
-  nameWithType.vb: AppDomainExtensions.ExtensionMethods(Of T1, T2)(AppDomain, Type, String, Type(), String, String)
-- uid: CG.Reflection.AssemblyExtensions
-  name: AssemblyExtensions
-  href: api/CG.Reflection.AssemblyExtensions.html
-  commentId: T:CG.Reflection.AssemblyExtensions
-  fullName: CG.Reflection.AssemblyExtensions
-  nameWithType: AssemblyExtensions
-- uid: CG.Reflection.AssemblyExtensions.ReadAssemblyVersion(System.Reflection.Assembly)
-  name: ReadAssemblyVersion(Assembly)
-  href: api/CG.Reflection.AssemblyExtensions.html#CG_Reflection_AssemblyExtensions_ReadAssemblyVersion_System_Reflection_Assembly_
-  commentId: M:CG.Reflection.AssemblyExtensions.ReadAssemblyVersion(System.Reflection.Assembly)
-  fullName: CG.Reflection.AssemblyExtensions.ReadAssemblyVersion(System.Reflection.Assembly)
-  nameWithType: AssemblyExtensions.ReadAssemblyVersion(Assembly)
-- uid: CG.Reflection.AssemblyExtensions.ReadAssemblyVersion*
-  name: ReadAssemblyVersion
-  href: api/CG.Reflection.AssemblyExtensions.html#CG_Reflection_AssemblyExtensions_ReadAssemblyVersion_
-  commentId: Overload:CG.Reflection.AssemblyExtensions.ReadAssemblyVersion
-  isSpec: "True"
-  fullName: CG.Reflection.AssemblyExtensions.ReadAssemblyVersion
-  nameWithType: AssemblyExtensions.ReadAssemblyVersion
-- uid: CG.Reflection.AssemblyExtensions.ReadCompany(System.Reflection.Assembly)
-  name: ReadCompany(Assembly)
-  href: api/CG.Reflection.AssemblyExtensions.html#CG_Reflection_AssemblyExtensions_ReadCompany_System_Reflection_Assembly_
-  commentId: M:CG.Reflection.AssemblyExtensions.ReadCompany(System.Reflection.Assembly)
-  fullName: CG.Reflection.AssemblyExtensions.ReadCompany(System.Reflection.Assembly)
-  nameWithType: AssemblyExtensions.ReadCompany(Assembly)
-- uid: CG.Reflection.AssemblyExtensions.ReadCompany*
-  name: ReadCompany
-  href: api/CG.Reflection.AssemblyExtensions.html#CG_Reflection_AssemblyExtensions_ReadCompany_
-  commentId: Overload:CG.Reflection.AssemblyExtensions.ReadCompany
-  isSpec: "True"
-  fullName: CG.Reflection.AssemblyExtensions.ReadCompany
-  nameWithType: AssemblyExtensions.ReadCompany
-- uid: CG.Reflection.AssemblyExtensions.ReadCopyright(System.Reflection.Assembly)
-  name: ReadCopyright(Assembly)
-  href: api/CG.Reflection.AssemblyExtensions.html#CG_Reflection_AssemblyExtensions_ReadCopyright_System_Reflection_Assembly_
-  commentId: M:CG.Reflection.AssemblyExtensions.ReadCopyright(System.Reflection.Assembly)
-  fullName: CG.Reflection.AssemblyExtensions.ReadCopyright(System.Reflection.Assembly)
-  nameWithType: AssemblyExtensions.ReadCopyright(Assembly)
-- uid: CG.Reflection.AssemblyExtensions.ReadCopyright*
-  name: ReadCopyright
-  href: api/CG.Reflection.AssemblyExtensions.html#CG_Reflection_AssemblyExtensions_ReadCopyright_
-  commentId: Overload:CG.Reflection.AssemblyExtensions.ReadCopyright
-  isSpec: "True"
-  fullName: CG.Reflection.AssemblyExtensions.ReadCopyright
-  nameWithType: AssemblyExtensions.ReadCopyright
-- uid: CG.Reflection.AssemblyExtensions.ReadDescription(System.Reflection.Assembly)
-  name: ReadDescription(Assembly)
-  href: api/CG.Reflection.AssemblyExtensions.html#CG_Reflection_AssemblyExtensions_ReadDescription_System_Reflection_Assembly_
-  commentId: M:CG.Reflection.AssemblyExtensions.ReadDescription(System.Reflection.Assembly)
-  fullName: CG.Reflection.AssemblyExtensions.ReadDescription(System.Reflection.Assembly)
-  nameWithType: AssemblyExtensions.ReadDescription(Assembly)
-- uid: CG.Reflection.AssemblyExtensions.ReadDescription*
-  name: ReadDescription
-  href: api/CG.Reflection.AssemblyExtensions.html#CG_Reflection_AssemblyExtensions_ReadDescription_
-  commentId: Overload:CG.Reflection.AssemblyExtensions.ReadDescription
-  isSpec: "True"
-  fullName: CG.Reflection.AssemblyExtensions.ReadDescription
-  nameWithType: AssemblyExtensions.ReadDescription
-- uid: CG.Reflection.AssemblyExtensions.ReadGuid(System.Reflection.Assembly)
-  name: ReadGuid(Assembly)
-  href: api/CG.Reflection.AssemblyExtensions.html#CG_Reflection_AssemblyExtensions_ReadGuid_System_Reflection_Assembly_
-  commentId: M:CG.Reflection.AssemblyExtensions.ReadGuid(System.Reflection.Assembly)
-  fullName: CG.Reflection.AssemblyExtensions.ReadGuid(System.Reflection.Assembly)
-  nameWithType: AssemblyExtensions.ReadGuid(Assembly)
-- uid: CG.Reflection.AssemblyExtensions.ReadGuid*
-  name: ReadGuid
-  href: api/CG.Reflection.AssemblyExtensions.html#CG_Reflection_AssemblyExtensions_ReadGuid_
-  commentId: Overload:CG.Reflection.AssemblyExtensions.ReadGuid
-  isSpec: "True"
-  fullName: CG.Reflection.AssemblyExtensions.ReadGuid
-  nameWithType: AssemblyExtensions.ReadGuid
-- uid: CG.Reflection.AssemblyExtensions.ReadInformationalVersion(System.Reflection.Assembly)
-  name: ReadInformationalVersion(Assembly)
-  href: api/CG.Reflection.AssemblyExtensions.html#CG_Reflection_AssemblyExtensions_ReadInformationalVersion_System_Reflection_Assembly_
-  commentId: M:CG.Reflection.AssemblyExtensions.ReadInformationalVersion(System.Reflection.Assembly)
-  fullName: CG.Reflection.AssemblyExtensions.ReadInformationalVersion(System.Reflection.Assembly)
-  nameWithType: AssemblyExtensions.ReadInformationalVersion(Assembly)
-- uid: CG.Reflection.AssemblyExtensions.ReadInformationalVersion*
-  name: ReadInformationalVersion
-  href: api/CG.Reflection.AssemblyExtensions.html#CG_Reflection_AssemblyExtensions_ReadInformationalVersion_
-  commentId: Overload:CG.Reflection.AssemblyExtensions.ReadInformationalVersion
-  isSpec: "True"
-  fullName: CG.Reflection.AssemblyExtensions.ReadInformationalVersion
-  nameWithType: AssemblyExtensions.ReadInformationalVersion
-- uid: CG.Reflection.AssemblyExtensions.ReadProduct(System.Reflection.Assembly)
-  name: ReadProduct(Assembly)
-  href: api/CG.Reflection.AssemblyExtensions.html#CG_Reflection_AssemblyExtensions_ReadProduct_System_Reflection_Assembly_
-  commentId: M:CG.Reflection.AssemblyExtensions.ReadProduct(System.Reflection.Assembly)
-  fullName: CG.Reflection.AssemblyExtensions.ReadProduct(System.Reflection.Assembly)
-  nameWithType: AssemblyExtensions.ReadProduct(Assembly)
-- uid: CG.Reflection.AssemblyExtensions.ReadProduct*
-  name: ReadProduct
-  href: api/CG.Reflection.AssemblyExtensions.html#CG_Reflection_AssemblyExtensions_ReadProduct_
-  commentId: Overload:CG.Reflection.AssemblyExtensions.ReadProduct
-  isSpec: "True"
-  fullName: CG.Reflection.AssemblyExtensions.ReadProduct
-  nameWithType: AssemblyExtensions.ReadProduct
-- uid: CG.Reflection.AssemblyExtensions.ReadTitle(System.Reflection.Assembly)
-  name: ReadTitle(Assembly)
-  href: api/CG.Reflection.AssemblyExtensions.html#CG_Reflection_AssemblyExtensions_ReadTitle_System_Reflection_Assembly_
-  commentId: M:CG.Reflection.AssemblyExtensions.ReadTitle(System.Reflection.Assembly)
-  fullName: CG.Reflection.AssemblyExtensions.ReadTitle(System.Reflection.Assembly)
-  nameWithType: AssemblyExtensions.ReadTitle(Assembly)
-- uid: CG.Reflection.AssemblyExtensions.ReadTitle*
-  name: ReadTitle
-  href: api/CG.Reflection.AssemblyExtensions.html#CG_Reflection_AssemblyExtensions_ReadTitle_
-  commentId: Overload:CG.Reflection.AssemblyExtensions.ReadTitle
-  isSpec: "True"
-  fullName: CG.Reflection.AssemblyExtensions.ReadTitle
-  nameWithType: AssemblyExtensions.ReadTitle
-- uid: CG.Reflection.AssemblyExtensions.ReadTrademark(System.Reflection.Assembly)
-  name: ReadTrademark(Assembly)
-  href: api/CG.Reflection.AssemblyExtensions.html#CG_Reflection_AssemblyExtensions_ReadTrademark_System_Reflection_Assembly_
-  commentId: M:CG.Reflection.AssemblyExtensions.ReadTrademark(System.Reflection.Assembly)
-  fullName: CG.Reflection.AssemblyExtensions.ReadTrademark(System.Reflection.Assembly)
-  nameWithType: AssemblyExtensions.ReadTrademark(Assembly)
-- uid: CG.Reflection.AssemblyExtensions.ReadTrademark*
-  name: ReadTrademark
-  href: api/CG.Reflection.AssemblyExtensions.html#CG_Reflection_AssemblyExtensions_ReadTrademark_
-  commentId: Overload:CG.Reflection.AssemblyExtensions.ReadTrademark
-  isSpec: "True"
-  fullName: CG.Reflection.AssemblyExtensions.ReadTrademark
-  nameWithType: AssemblyExtensions.ReadTrademark
 - uid: CG.Reflection.PropertyCache
   name: PropertyCache
   href: api/CG.Reflection.PropertyCache.html
@@ -411,3 +248,178 @@ references:
   isSpec: "True"
   fullName: CG.Reflection.Services.PackageService.EntryAssembly
   nameWithType: PackageService.EntryAssembly
+- uid: System
+  name: System
+  href: api/System.html
+  commentId: N:System
+  fullName: System
+  nameWithType: System
+- uid: System.AppDomainExtensions
+  name: AppDomainExtensions
+  href: api/System.AppDomainExtensions.html
+  commentId: T:System.AppDomainExtensions
+  fullName: System.AppDomainExtensions
+  nameWithType: AppDomainExtensions
+- uid: System.AppDomainExtensions.ExtensionMethods(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)
+  name: ExtensionMethods(AppDomain, Type, String, Type[], String, String)
+  href: api/System.AppDomainExtensions.html#System_AppDomainExtensions_ExtensionMethods_System_AppDomain_System_Type_System_String_System_Type___System_String_System_String_
+  commentId: M:System.AppDomainExtensions.ExtensionMethods(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)
+  name.vb: ExtensionMethods(AppDomain, Type, String, Type(), String, String)
+  fullName: System.AppDomainExtensions.ExtensionMethods(System.AppDomain, System.Type, System.String, System.Type[], System.String, System.String)
+  fullName.vb: System.AppDomainExtensions.ExtensionMethods(System.AppDomain, System.Type, System.String, System.Type(), System.String, System.String)
+  nameWithType: AppDomainExtensions.ExtensionMethods(AppDomain, Type, String, Type[], String, String)
+  nameWithType.vb: AppDomainExtensions.ExtensionMethods(AppDomain, Type, String, Type(), String, String)
+- uid: System.AppDomainExtensions.ExtensionMethods*
+  name: ExtensionMethods
+  href: api/System.AppDomainExtensions.html#System_AppDomainExtensions_ExtensionMethods_
+  commentId: Overload:System.AppDomainExtensions.ExtensionMethods
+  isSpec: "True"
+  fullName: System.AppDomainExtensions.ExtensionMethods
+  nameWithType: AppDomainExtensions.ExtensionMethods
+- uid: System.AppDomainExtensions.ExtensionMethods``1(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)
+  name: ExtensionMethods<T>(AppDomain, Type, String, Type[], String, String)
+  href: api/System.AppDomainExtensions.html#System_AppDomainExtensions_ExtensionMethods__1_System_AppDomain_System_Type_System_String_System_Type___System_String_System_String_
+  commentId: M:System.AppDomainExtensions.ExtensionMethods``1(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)
+  name.vb: ExtensionMethods(Of T)(AppDomain, Type, String, Type(), String, String)
+  fullName: System.AppDomainExtensions.ExtensionMethods<T>(System.AppDomain, System.Type, System.String, System.Type[], System.String, System.String)
+  fullName.vb: System.AppDomainExtensions.ExtensionMethods(Of T)(System.AppDomain, System.Type, System.String, System.Type(), System.String, System.String)
+  nameWithType: AppDomainExtensions.ExtensionMethods<T>(AppDomain, Type, String, Type[], String, String)
+  nameWithType.vb: AppDomainExtensions.ExtensionMethods(Of T)(AppDomain, Type, String, Type(), String, String)
+- uid: System.AppDomainExtensions.ExtensionMethods``2(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)
+  name: ExtensionMethods<T1, T2>(AppDomain, Type, String, Type[], String, String)
+  href: api/System.AppDomainExtensions.html#System_AppDomainExtensions_ExtensionMethods__2_System_AppDomain_System_Type_System_String_System_Type___System_String_System_String_
+  commentId: M:System.AppDomainExtensions.ExtensionMethods``2(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)
+  name.vb: ExtensionMethods(Of T1, T2)(AppDomain, Type, String, Type(), String, String)
+  fullName: System.AppDomainExtensions.ExtensionMethods<T1, T2>(System.AppDomain, System.Type, System.String, System.Type[], System.String, System.String)
+  fullName.vb: System.AppDomainExtensions.ExtensionMethods(Of T1, T2)(System.AppDomain, System.Type, System.String, System.Type(), System.String, System.String)
+  nameWithType: AppDomainExtensions.ExtensionMethods<T1, T2>(AppDomain, Type, String, Type[], String, String)
+  nameWithType.vb: AppDomainExtensions.ExtensionMethods(Of T1, T2)(AppDomain, Type, String, Type(), String, String)
+- uid: System.Reflection
+  name: System.Reflection
+  href: api/System.Reflection.html
+  commentId: N:System.Reflection
+  fullName: System.Reflection
+  nameWithType: System.Reflection
+- uid: System.Reflection.AssemblyExtensions
+  name: AssemblyExtensions
+  href: api/System.Reflection.AssemblyExtensions.html
+  commentId: T:System.Reflection.AssemblyExtensions
+  fullName: System.Reflection.AssemblyExtensions
+  nameWithType: AssemblyExtensions
+- uid: System.Reflection.AssemblyExtensions.ReadAssemblyVersion(System.Reflection.Assembly)
+  name: ReadAssemblyVersion(Assembly)
+  href: api/System.Reflection.AssemblyExtensions.html#System_Reflection_AssemblyExtensions_ReadAssemblyVersion_System_Reflection_Assembly_
+  commentId: M:System.Reflection.AssemblyExtensions.ReadAssemblyVersion(System.Reflection.Assembly)
+  fullName: System.Reflection.AssemblyExtensions.ReadAssemblyVersion(System.Reflection.Assembly)
+  nameWithType: AssemblyExtensions.ReadAssemblyVersion(Assembly)
+- uid: System.Reflection.AssemblyExtensions.ReadAssemblyVersion*
+  name: ReadAssemblyVersion
+  href: api/System.Reflection.AssemblyExtensions.html#System_Reflection_AssemblyExtensions_ReadAssemblyVersion_
+  commentId: Overload:System.Reflection.AssemblyExtensions.ReadAssemblyVersion
+  isSpec: "True"
+  fullName: System.Reflection.AssemblyExtensions.ReadAssemblyVersion
+  nameWithType: AssemblyExtensions.ReadAssemblyVersion
+- uid: System.Reflection.AssemblyExtensions.ReadCompany(System.Reflection.Assembly)
+  name: ReadCompany(Assembly)
+  href: api/System.Reflection.AssemblyExtensions.html#System_Reflection_AssemblyExtensions_ReadCompany_System_Reflection_Assembly_
+  commentId: M:System.Reflection.AssemblyExtensions.ReadCompany(System.Reflection.Assembly)
+  fullName: System.Reflection.AssemblyExtensions.ReadCompany(System.Reflection.Assembly)
+  nameWithType: AssemblyExtensions.ReadCompany(Assembly)
+- uid: System.Reflection.AssemblyExtensions.ReadCompany*
+  name: ReadCompany
+  href: api/System.Reflection.AssemblyExtensions.html#System_Reflection_AssemblyExtensions_ReadCompany_
+  commentId: Overload:System.Reflection.AssemblyExtensions.ReadCompany
+  isSpec: "True"
+  fullName: System.Reflection.AssemblyExtensions.ReadCompany
+  nameWithType: AssemblyExtensions.ReadCompany
+- uid: System.Reflection.AssemblyExtensions.ReadCopyright(System.Reflection.Assembly)
+  name: ReadCopyright(Assembly)
+  href: api/System.Reflection.AssemblyExtensions.html#System_Reflection_AssemblyExtensions_ReadCopyright_System_Reflection_Assembly_
+  commentId: M:System.Reflection.AssemblyExtensions.ReadCopyright(System.Reflection.Assembly)
+  fullName: System.Reflection.AssemblyExtensions.ReadCopyright(System.Reflection.Assembly)
+  nameWithType: AssemblyExtensions.ReadCopyright(Assembly)
+- uid: System.Reflection.AssemblyExtensions.ReadCopyright*
+  name: ReadCopyright
+  href: api/System.Reflection.AssemblyExtensions.html#System_Reflection_AssemblyExtensions_ReadCopyright_
+  commentId: Overload:System.Reflection.AssemblyExtensions.ReadCopyright
+  isSpec: "True"
+  fullName: System.Reflection.AssemblyExtensions.ReadCopyright
+  nameWithType: AssemblyExtensions.ReadCopyright
+- uid: System.Reflection.AssemblyExtensions.ReadDescription(System.Reflection.Assembly)
+  name: ReadDescription(Assembly)
+  href: api/System.Reflection.AssemblyExtensions.html#System_Reflection_AssemblyExtensions_ReadDescription_System_Reflection_Assembly_
+  commentId: M:System.Reflection.AssemblyExtensions.ReadDescription(System.Reflection.Assembly)
+  fullName: System.Reflection.AssemblyExtensions.ReadDescription(System.Reflection.Assembly)
+  nameWithType: AssemblyExtensions.ReadDescription(Assembly)
+- uid: System.Reflection.AssemblyExtensions.ReadDescription*
+  name: ReadDescription
+  href: api/System.Reflection.AssemblyExtensions.html#System_Reflection_AssemblyExtensions_ReadDescription_
+  commentId: Overload:System.Reflection.AssemblyExtensions.ReadDescription
+  isSpec: "True"
+  fullName: System.Reflection.AssemblyExtensions.ReadDescription
+  nameWithType: AssemblyExtensions.ReadDescription
+- uid: System.Reflection.AssemblyExtensions.ReadGuid(System.Reflection.Assembly)
+  name: ReadGuid(Assembly)
+  href: api/System.Reflection.AssemblyExtensions.html#System_Reflection_AssemblyExtensions_ReadGuid_System_Reflection_Assembly_
+  commentId: M:System.Reflection.AssemblyExtensions.ReadGuid(System.Reflection.Assembly)
+  fullName: System.Reflection.AssemblyExtensions.ReadGuid(System.Reflection.Assembly)
+  nameWithType: AssemblyExtensions.ReadGuid(Assembly)
+- uid: System.Reflection.AssemblyExtensions.ReadGuid*
+  name: ReadGuid
+  href: api/System.Reflection.AssemblyExtensions.html#System_Reflection_AssemblyExtensions_ReadGuid_
+  commentId: Overload:System.Reflection.AssemblyExtensions.ReadGuid
+  isSpec: "True"
+  fullName: System.Reflection.AssemblyExtensions.ReadGuid
+  nameWithType: AssemblyExtensions.ReadGuid
+- uid: System.Reflection.AssemblyExtensions.ReadInformationalVersion(System.Reflection.Assembly)
+  name: ReadInformationalVersion(Assembly)
+  href: api/System.Reflection.AssemblyExtensions.html#System_Reflection_AssemblyExtensions_ReadInformationalVersion_System_Reflection_Assembly_
+  commentId: M:System.Reflection.AssemblyExtensions.ReadInformationalVersion(System.Reflection.Assembly)
+  fullName: System.Reflection.AssemblyExtensions.ReadInformationalVersion(System.Reflection.Assembly)
+  nameWithType: AssemblyExtensions.ReadInformationalVersion(Assembly)
+- uid: System.Reflection.AssemblyExtensions.ReadInformationalVersion*
+  name: ReadInformationalVersion
+  href: api/System.Reflection.AssemblyExtensions.html#System_Reflection_AssemblyExtensions_ReadInformationalVersion_
+  commentId: Overload:System.Reflection.AssemblyExtensions.ReadInformationalVersion
+  isSpec: "True"
+  fullName: System.Reflection.AssemblyExtensions.ReadInformationalVersion
+  nameWithType: AssemblyExtensions.ReadInformationalVersion
+- uid: System.Reflection.AssemblyExtensions.ReadProduct(System.Reflection.Assembly)
+  name: ReadProduct(Assembly)
+  href: api/System.Reflection.AssemblyExtensions.html#System_Reflection_AssemblyExtensions_ReadProduct_System_Reflection_Assembly_
+  commentId: M:System.Reflection.AssemblyExtensions.ReadProduct(System.Reflection.Assembly)
+  fullName: System.Reflection.AssemblyExtensions.ReadProduct(System.Reflection.Assembly)
+  nameWithType: AssemblyExtensions.ReadProduct(Assembly)
+- uid: System.Reflection.AssemblyExtensions.ReadProduct*
+  name: ReadProduct
+  href: api/System.Reflection.AssemblyExtensions.html#System_Reflection_AssemblyExtensions_ReadProduct_
+  commentId: Overload:System.Reflection.AssemblyExtensions.ReadProduct
+  isSpec: "True"
+  fullName: System.Reflection.AssemblyExtensions.ReadProduct
+  nameWithType: AssemblyExtensions.ReadProduct
+- uid: System.Reflection.AssemblyExtensions.ReadTitle(System.Reflection.Assembly)
+  name: ReadTitle(Assembly)
+  href: api/System.Reflection.AssemblyExtensions.html#System_Reflection_AssemblyExtensions_ReadTitle_System_Reflection_Assembly_
+  commentId: M:System.Reflection.AssemblyExtensions.ReadTitle(System.Reflection.Assembly)
+  fullName: System.Reflection.AssemblyExtensions.ReadTitle(System.Reflection.Assembly)
+  nameWithType: AssemblyExtensions.ReadTitle(Assembly)
+- uid: System.Reflection.AssemblyExtensions.ReadTitle*
+  name: ReadTitle
+  href: api/System.Reflection.AssemblyExtensions.html#System_Reflection_AssemblyExtensions_ReadTitle_
+  commentId: Overload:System.Reflection.AssemblyExtensions.ReadTitle
+  isSpec: "True"
+  fullName: System.Reflection.AssemblyExtensions.ReadTitle
+  nameWithType: AssemblyExtensions.ReadTitle
+- uid: System.Reflection.AssemblyExtensions.ReadTrademark(System.Reflection.Assembly)
+  name: ReadTrademark(Assembly)
+  href: api/System.Reflection.AssemblyExtensions.html#System_Reflection_AssemblyExtensions_ReadTrademark_System_Reflection_Assembly_
+  commentId: M:System.Reflection.AssemblyExtensions.ReadTrademark(System.Reflection.Assembly)
+  fullName: System.Reflection.AssemblyExtensions.ReadTrademark(System.Reflection.Assembly)
+  nameWithType: AssemblyExtensions.ReadTrademark(Assembly)
+- uid: System.Reflection.AssemblyExtensions.ReadTrademark*
+  name: ReadTrademark
+  href: api/System.Reflection.AssemblyExtensions.html#System_Reflection_AssemblyExtensions_ReadTrademark_
+  commentId: Overload:System.Reflection.AssemblyExtensions.ReadTrademark
+  isSpec: "True"
+  fullName: System.Reflection.AssemblyExtensions.ReadTrademark
+  nameWithType: AssemblyExtensions.ReadTrademark
