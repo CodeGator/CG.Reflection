@@ -294,6 +294,22 @@ references:
   fullName.vb: System.AppDomainExtensions.ExtensionMethods(Of T1, T2)(System.AppDomain, System.Type, System.String, System.Type(), System.String, System.String)
   nameWithType: AppDomainExtensions.ExtensionMethods<T1, T2>(AppDomain, Type, String, Type[], String, String)
   nameWithType.vb: AppDomainExtensions.ExtensionMethods(Of T1, T2)(AppDomain, Type, String, Type(), String, String)
+- uid: System.AppDomainExtensions.FindConcreteTypes*
+  name: FindConcreteTypes
+  href: api/System.AppDomainExtensions.html#System_AppDomainExtensions_FindConcreteTypes_
+  commentId: Overload:System.AppDomainExtensions.FindConcreteTypes
+  isSpec: "True"
+  fullName: System.AppDomainExtensions.FindConcreteTypes
+  nameWithType: AppDomainExtensions.FindConcreteTypes
+- uid: System.AppDomainExtensions.FindConcreteTypes``1(System.AppDomain,System.String,System.String)
+  name: FindConcreteTypes<T>(AppDomain, String, String)
+  href: api/System.AppDomainExtensions.html#System_AppDomainExtensions_FindConcreteTypes__1_System_AppDomain_System_String_System_String_
+  commentId: M:System.AppDomainExtensions.FindConcreteTypes``1(System.AppDomain,System.String,System.String)
+  name.vb: FindConcreteTypes(Of T)(AppDomain, String, String)
+  fullName: System.AppDomainExtensions.FindConcreteTypes<T>(System.AppDomain, System.String, System.String)
+  fullName.vb: System.AppDomainExtensions.FindConcreteTypes(Of T)(System.AppDomain, System.String, System.String)
+  nameWithType: AppDomainExtensions.FindConcreteTypes<T>(AppDomain, String, String)
+  nameWithType.vb: AppDomainExtensions.FindConcreteTypes(Of T)(AppDomain, String, String)
 - uid: System.Reflection
   name: System.Reflection
   href: api/System.Reflection.html
