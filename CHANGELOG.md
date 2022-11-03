@@ -4,6 +4,8 @@
 ## 2022.1
 
 * I switched the framework to .net 6.0
+* bug fixes
+* I added the FindConcreteTypes extension method
 
 ## 2021.3
 
