@@ -13,13 +13,13 @@ references:
   commentId: T:CG.Reflection.PropertyCache
   fullName: CG.Reflection.PropertyCache
   nameWithType: PropertyCache
-- uid: CG.Reflection.PropertyCache.Item(System.Type,System.String)
+- uid: CG.Reflection.PropertyCache.Item(Type,System.String)
   name: Item[Type, String]
-  href: api/CG.Reflection.PropertyCache.html#CG_Reflection_PropertyCache_Item_System_Type_System_String_
-  commentId: P:CG.Reflection.PropertyCache.Item(System.Type,System.String)
+  href: api/CG.Reflection.PropertyCache.html#CG_Reflection_PropertyCache_Item_Type_System_String_
+  commentId: P:CG.Reflection.PropertyCache.Item(Type,System.String)
   name.vb: Item(Type, String)
-  fullName: CG.Reflection.PropertyCache.Item[System.Type, System.String]
-  fullName.vb: CG.Reflection.PropertyCache.Item(System.Type, System.String)
+  fullName: CG.Reflection.PropertyCache.Item[Type, System.String]
+  fullName.vb: CG.Reflection.PropertyCache.Item(Type, System.String)
   nameWithType: PropertyCache.Item[Type, String]
   nameWithType.vb: PropertyCache.Item(Type, String)
 - uid: CG.Reflection.PropertyCache.Item*
