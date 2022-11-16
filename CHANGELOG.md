@@ -1,6 +1,10 @@
 # CG.Reflection change log
 ---
 
+## 2023.1
+
+* bug fixes
+
 ## 2022.1
 
 * I switched the framework to .net 6.0

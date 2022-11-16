@@ -1,7 +1,4 @@
-﻿using System;
-using CG.Diagnostics;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+﻿
 namespace CG.Reflection
 {
     /// <summary>
