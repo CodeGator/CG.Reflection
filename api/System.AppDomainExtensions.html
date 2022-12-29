@@ -126,14 +126,14 @@ type, for registering types related to reflection.</p>
   </h3>
   <a id="System_AppDomainExtensions_ExtensionMethods_" data-uid="System.AppDomainExtensions.ExtensionMethods*"></a>
   <h4 id="System_AppDomainExtensions_ExtensionMethods_System_AppDomain_System_Type_System_String_System_Type___System_String_System_String_" data-uid="System.AppDomainExtensions.ExtensionMethods(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)">ExtensionMethods(AppDomain, Type, String, Type[], String, String)</h4>
-  <div class="markdown level1 summary"><p>This method searches among the assemblies loaded into the current
-app-domain for any public extension methods associated with the
-specified type and signature.</p>
+  <div class="markdown level1 summary"><p>This method searches among those assemblies currently loaded into
+the app-domain for any public extension methods with the given name,
+that contain the specified parameter types.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;MethodInfo&gt; ExtensionMethods(this AppDomain appDomain, Type extensionType, string methodName, Type[] parameterTypes = null, string assemblyWhiteList = &quot;&quot;, string assemblyBlackList = &quot;Microsoft*, System*, mscorlib, netstandard&quot;)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;MethodInfo&gt; ExtensionMethods(this AppDomain appDomain, Type extensionType, string extensionMethodName, Type[] parameterTypes = null, string assemblyWhiteList = &quot;&quot;, string assemblyBlackList = &quot;Microsoft*, System*, mscorlib, netstandard&quot;)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -154,13 +154,14 @@ specified type and signature.</p>
       <tr>
         <td><span class="xref">System.Type</span></td>
         <td><span class="parametername">extensionType</span></td>
-        <td><p>The type to match against.</p>
+        <td><p>The type that is extended by the target
+extension method.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">methodName</span></td>
-        <td><p>The method name to match against.</p>
+        <td><span class="parametername">extensionMethodName</span></td>
+        <td><p>The name of the target extension method.</p>
 </td>
       </tr>
       <tr>
@@ -203,6 +204,14 @@ zero or more matching extension methods.</p>
       </tr>
     </tbody>
   </table>
+  <h5 id="System_AppDomainExtensions_ExtensionMethods_System_AppDomain_System_Type_System_String_System_Type___System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+If an assembly name is added to the <code data-dev-comment-type="paramref" class="paramref">assemblyWhiteList</code>
+parameter, but isn&apos;t currently loaded into the app-domain, then that
+assembly is loaded by this method prior to searching for a matching
+extension method.
+</p>
+</div>
   <a id="System_AppDomainExtensions_ExtensionMethods_" data-uid="System.AppDomainExtensions.ExtensionMethods*"></a>
   <h4 id="System_AppDomainExtensions_ExtensionMethods__1_System_AppDomain_System_Type_System_String_System_Type___System_String_System_String_" data-uid="System.AppDomainExtensions.ExtensionMethods``1(System.AppDomain,System.Type,System.String,System.Type[],System.String,System.String)">ExtensionMethods&lt;T&gt;(AppDomain, Type, String, Type[], String, String)</h4>
   <div class="markdown level1 summary"><p>This method searches among the assemblies loaded into the current
@@ -212,7 +221,7 @@ specified type and signature.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;MethodInfo&gt; ExtensionMethods&lt;T&gt;(this AppDomain appDomain, Type extensionType, string methodName, Type[] parameterTypes = null, string assemblyWhiteList = &quot;&quot;, string assemblyBlackList = &quot;Microsoft*, System*, mscorlib, netstandard&quot;)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;MethodInfo&gt; ExtensionMethods&lt;T&gt;(this AppDomain appDomain, Type extensionType, string extensionMethodName, Type[] parameterTypes = null, string assemblyWhiteList = &quot;&quot;, string assemblyBlackList = &quot;Microsoft*, System*, mscorlib, netstandard&quot;)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -233,13 +242,14 @@ specified type and signature.</p>
       <tr>
         <td><span class="xref">System.Type</span></td>
         <td><span class="parametername">extensionType</span></td>
-        <td><p>The type to match against.</p>
+        <td><p>The type that is extended by the target
+extension method.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">methodName</span></td>
-        <td><p>The method name to match against.</p>
+        <td><span class="parametername">extensionMethodName</span></td>
+        <td><p>The name of the target extension method.</p>
 </td>
       </tr>
       <tr>
@@ -307,7 +317,7 @@ specified type and signature.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;MethodInfo&gt; ExtensionMethods&lt;T1, T2&gt;(this AppDomain appDomain, Type extensionType, string methodName, Type[] parameterTypes = null, string assemblyWhiteList = &quot;&quot;, string assemblyBlackList = &quot;Microsoft*, System*, mscorlib, netstandard&quot;)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;MethodInfo&gt; ExtensionMethods&lt;T1, T2&gt;(this AppDomain appDomain, Type extensionType, string extensionMethodName, Type[] parameterTypes = null, string assemblyWhiteList = &quot;&quot;, string assemblyBlackList = &quot;Microsoft*, System*, mscorlib, netstandard&quot;)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -328,13 +338,14 @@ specified type and signature.</p>
       <tr>
         <td><span class="xref">System.Type</span></td>
         <td><span class="parametername">extensionType</span></td>
-        <td><p>The type to match against.</p>
+        <td><p>The type that is extended by the target
+extension method.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">methodName</span></td>
-        <td><p>The method name to match against.</p>
+        <td><span class="parametername">extensionMethodName</span></td>
+        <td><p>The name of the target extension method.</p>
 </td>
       </tr>
       <tr>
