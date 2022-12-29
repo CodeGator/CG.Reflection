@@ -142,13 +142,14 @@ public static partial class AppDomainExtensions
     // *******************************************************************
 
     /// <summary>
-    /// This method searches among the assemblies loaded into the current 
-    /// app-domain for any public extension methods associated with the 
-    /// specified type and signature.
+    /// This method searches among those assemblies currently loaded into 
+    /// the app-domain for any public extension methods with the given name, 
+    /// that contain the specified parameter types.
     /// </summary>
     /// <param name="appDomain">The application domain to use for the operation.</param>
-    /// <param name="extensionType">The type to match against.</param>
-    /// <param name="methodName">The method name to match against.</param>
+    /// <param name="extensionType">The type that is extended by the target 
+    /// extension method.</param>
+    /// <param name="extensionMethodName">The name of the target extension method.</param>
     /// <param name="parameterTypes">An optional list of parameter type(s) 
     /// to match against.</param>
     /// <param name="assemblyWhiteList">An optional white list of assembly
@@ -157,11 +158,19 @@ public static partial class AppDomainExtensions
     /// names - for narrowing the range of assemblies searched.</param>
     /// <returns>A sequence of <see cref="MethodInfo"/> objects representing
     /// zero or more matching extension methods.</returns>
+    /// <remarks>
+    /// <para>
+    /// If an assembly name is added to the <paramref name="assemblyWhiteList"/>
+    /// parameter, but isn't currently loaded into the app-domain, then that
+    /// assembly is loaded by this method prior to searching for a matching
+    /// extension method.
+    /// </para>
+    /// </remarks>
     public static IEnumerable<MethodInfo> ExtensionMethods(
         this AppDomain appDomain,
         Type extensionType,
-        string methodName,
-        Type[] parameterTypes = null,
+        string extensionMethodName,
+        Type[]? parameterTypes = null,
         string assemblyWhiteList = "",
         string assemblyBlackList = "Microsoft*, System*, mscorlib, netstandard"
         )
@@ -169,7 +178,7 @@ public static partial class AppDomainExtensions
         // Validate the parameters before attempting to use them.
         Guard.Instance().ThrowIfNull(appDomain, nameof(appDomain))
             .ThrowIfNull(extensionType, nameof(extensionType))
-            .ThrowIfNullOrEmpty(methodName, nameof(methodName));
+            .ThrowIfNullOrEmpty(extensionMethodName, nameof(extensionMethodName));
 
         // Should we supply a valid value?
         if (parameterTypes == null)
@@ -271,7 +280,7 @@ public static partial class AppDomainExtensions
                     BindingFlags.Static |
                     BindingFlags.Public
                     ).Where(x =>
-                        x.Name == methodName &&
+                        x.Name == extensionMethodName &&
                         x.IsDefined(typeof(ExtensionAttribute), false) &&
                         !x.ContainsGenericParameters
                         );
@@ -279,56 +288,73 @@ public static partial class AppDomainExtensions
                 // Loop through the results.
                 foreach (var method in typeMethods)
                 {
-                    // Get the parameter info.
-                    var pi = method.GetParameters();
-
-                    // Get the LHS of the comparison.
-                    var lhs = pi.Select(x => x.ParameterType).ToArray();
-
-                    // Get the RHS of the comparison.
-                    var rhs = new Type[] { extensionType }.Concat(parameterTypes).ToArray();
-
-                    // At this point we only know that we have an extension method with a matching
-                    //   name. We don't know if the signatures match, or not. Let's go determine 
-                    //   that now.
-
-                    // Ignore methods with mismatched signatures.
-                    if (lhs.Count() != rhs.Count())
+                    // Were parameter types provided?
+                    if (parameterTypes.Any())
                     {
-                        // Skip it.
-                        continue;
-                    }
+                        // If we get here then the caller specified parameter types to
+                        //   match against, so we'll do that now.
 
-                    // Now verify that all the argument types either match, or at least, are
-                    //   assignable types (so that inherited/derived types work).
+                        // Get the parameter info.
+                        var pi = method.GetParameters();
 
-                    var shouldAdd = true; // Assume we should add the method.
+                        // Get the LHS of the comparison.
+                        var lhs = pi.Select(x => x.ParameterType).ToArray();
 
-                    // Check for non-assignable args.
-                    for (int z = 0; z < lhs.Length; z++)
-                    {
-                        // Are the arg types not assignable?
-                        if (false == lhs[z].IsAssignableTo(rhs[z]))
+                        // Get the RHS of the comparison.
+                        var rhs = new Type[] { extensionType }.Concat(parameterTypes).ToArray();
+
+                        // At this point we only know that we have an extension method with a matching
+                        //   name. We don't know if the signatures match, or not. Let's go determine 
+                        //   that now.
+
+                        // Ignore methods with mismatched signatures.
+                        if (lhs.Count() != rhs.Count())
                         {
-                            // Nope, we don't want this method.
-                            shouldAdd = false;
-                            break; // Take no for an answer.
+                            // Skip it.
+                            continue;
+                        }
+
+                        // Now verify that all the argument types either match, or at least, are
+                        //   assignable types (so that inherited/derived types work).
+
+                        var shouldAdd = true; // Assume we should add the method.
+
+                        // Check for non-assignable args.
+                        for (int z = 0; z < lhs.Length; z++)
+                        {
+                            // Are the arg types not assignable?
+                            if (false == lhs[z].IsAssignableTo(rhs[z]))
+                            {
+                                // Nope, we don't want this method.
+                                shouldAdd = false;
+                                break; // Take no for an answer.
+                            }
+                        }
+
+                        // Should we add the method?
+                        if (shouldAdd)
+                        {
+                            // See if we've already added the method.
+                            shouldAdd |= methods.Any(x => x.Name == method.Name);
+                        }
+
+                        // Should we add the method?
+                        if (shouldAdd)
+                        {
+                            // Add the method.
+                            methods.Add(method);
+                            break; // Take yes for an answer.
                         }
                     }
-
-                    // Should we add the method?
-                    if (shouldAdd)
+                    else
                     {
-                        // See if we've already added the method.
-                        shouldAdd |= methods.Any(x => x.Name == method.Name);
-                    }
+                        // If we get here then the caller didn't specify any
+                        //   parameter types to match against, so, we'll take
+                        //   all the methods we found and let the caller decide
+                        //   which (if any) to use.
 
-                    // Should we add the method?
-                    if (shouldAdd)
-                    {
                         // Add the method.
                         methods.Add(method);
-                        break; // Take yes for an answer.
                     }
                 }
             }
@@ -347,8 +373,9 @@ public static partial class AppDomainExtensions
     /// </summary>
     /// <typeparam name="T">The type of generic argument to match.</typeparam>
     /// <param name="appDomain">The application domain to use for the operation.</param>
-    /// <param name="extensionType">The type to match against.</param>
-    /// <param name="methodName">The method name to match against.</param>
+    /// <param name="extensionType">The type that is extended by the target 
+    /// extension method.</param>
+    /// <param name="extensionMethodName">The name of the target extension method.</param>
     /// <param name="parameterTypes">An optional list of parameter type(s) 
     /// to match against.</param>
     /// <param name="assemblyWhiteList">An optional white list of assembly
@@ -360,8 +387,8 @@ public static partial class AppDomainExtensions
     public static IEnumerable<MethodInfo> ExtensionMethods<T>(
         this AppDomain appDomain,
         Type extensionType,
-        string methodName,
-        Type[] parameterTypes = null,
+        string extensionMethodName,
+        Type[]? parameterTypes = null,
         string assemblyWhiteList = "",
         string assemblyBlackList = "Microsoft*, System*, mscorlib, netstandard"
         )
@@ -369,7 +396,7 @@ public static partial class AppDomainExtensions
         // Validate the parameters before attempting to use them.
         Guard.Instance().ThrowIfNull(appDomain, nameof(appDomain))
             .ThrowIfNull(extensionType, nameof(extensionType))
-            .ThrowIfNullOrEmpty(methodName, nameof(methodName));
+            .ThrowIfNullOrEmpty(extensionMethodName, nameof(extensionMethodName));
 
         // Should we supply a valid value?
         if (parameterTypes == null)
@@ -466,7 +493,7 @@ public static partial class AppDomainExtensions
                 var typeMethods = type.GetMethods(
                     BindingFlags.Static | BindingFlags.Public
                     ).Where(x =>
-                        x.Name == methodName &&
+                        x.Name == extensionMethodName &&
                         x.IsDefined(typeof(ExtensionAttribute), false) &&
                         x.ContainsGenericParameters
                         );
@@ -474,63 +501,80 @@ public static partial class AppDomainExtensions
                 // Loop through any methods we find.
                 foreach (var method in typeMethods)
                 {
-                    // Get the generic type arguments.
-                    var genArgs = method.GetGenericArguments();
-
-                    // Do the type args counts match?
-                    if (1 != genArgs.Length)
+                    // Were parameter types provided?
+                    if (parameterTypes.Any())
                     {
-                        continue; // Generic type counts don't match.
-                    }
+                        // If we get here then the caller specified parameter types to
+                        //   match against, so we'll do that now.
 
-                    // Do the type args themselves match - or at least, are they
-                    //   assignable?
-                    if (false == genArgs[0].BaseType.IsAssignableFrom(typeof(T)))
-                    {
-                        continue; // Generic types don't match.
-                    }
+                        // Get the generic type arguments.
+                        var genArgs = method.GetGenericArguments();
 
-                    // Get the parameter info.
-                    var pi = method.GetParameters();
-
-                    // Get the LHS of the comparison.
-                    var lhs = pi.Select(x => x.ParameterType).ToArray();
-
-                    // Get the RHS of the comparison.
-                    var rhs = new Type[] { extensionType }.Concat(parameterTypes).ToArray();
-
-                    // At this point we only know that we have an extension method with a matching
-                    //   name and type argument(s). We don't know if the signatures match, or not.
-                    //   Let's go determine that now.
-
-                    // Ignore methods with mismatched signatures.
-                    if (lhs.Count() != rhs.Count())
-                    {
-                        // Skip it.
-                        continue;
-                    }
-
-                    // Now verify that all the argument types either match, or at least, are
-                    //   assignable types (so that inherited/derived types work).
-
-                    var shouldAdd = true; // Assume we should add the method.
-
-                    // Check for non-assignable args.
-                    for (int z = 0; z < lhs.Length; z++)
-                    {
-                        // Are the arg types not assignable?
-                        if (false == lhs[z].IsAssignableTo(rhs[z]))
+                        // Do the type args counts match?
+                        if (1 != genArgs.Length)
                         {
-                            shouldAdd = false; // Nope, we don't want this method.
+                            continue; // Generic type counts don't match.
+                        }
+
+                        // Do the type args themselves match - or at least, are they
+                        //   assignable?
+                        if (false == genArgs[0].BaseType.IsAssignableFrom(typeof(T)))
+                        {
+                            continue; // Generic types don't match.
+                        }
+
+                        // Get the parameter info.
+                        var pi = method.GetParameters();
+
+                        // Get the LHS of the comparison.
+                        var lhs = pi.Select(x => x.ParameterType).ToArray();
+
+                        // Get the RHS of the comparison.
+                        var rhs = new Type[] { extensionType }.Concat(parameterTypes).ToArray();
+
+                        // At this point we only know that we have an extension method with a matching
+                        //   name and type argument(s). We don't know if the signatures match, or not.
+                        //   Let's go determine that now.
+
+                        // Ignore methods with mismatched signatures.
+                        if (lhs.Count() != rhs.Count())
+                        {
+                            // Skip it.
+                            continue;
+                        }
+
+                        // Now verify that all the argument types either match, or at least, are
+                        //   assignable types (so that inherited/derived types work).
+
+                        var shouldAdd = true; // Assume we should add the method.
+
+                        // Check for non-assignable args.
+                        for (int z = 0; z < lhs.Length; z++)
+                        {
+                            // Are the arg types not assignable?
+                            if (false == lhs[z].IsAssignableTo(rhs[z]))
+                            {
+                                shouldAdd = false; // Nope, we don't want this method.
+                                break;
+                            }
+                        }
+
+                        // Should we add the method?
+                        if (shouldAdd)
+                        {
+                            methods.Add(method); // Found a match.
                             break;
                         }
                     }
-
-                    // Should we add the method?
-                    if (shouldAdd)
+                    else
                     {
-                        methods.Add(method); // Found a match.
-                        break;
+                        // If we get here then the caller didn't specify any
+                        //   parameter types to match against, so, we'll take
+                        //   all the methods we found and let the caller decide
+                        //   which (if any) to use.
+
+                        // Add the method.
+                        methods.Add(method);
                     }
                 }
             }
@@ -550,8 +594,9 @@ public static partial class AppDomainExtensions
     /// <typeparam name="T1">The first type argument to match.</typeparam>
     /// <typeparam name="T2">The second type argument to match.</typeparam>
     /// <param name="appDomain">The application domain to use for the operation.</param>
-    /// <param name="extensionType">The type to match against.</param>
-    /// <param name="methodName">The method name to match against.</param>
+    /// <param name="extensionType">The type that is extended by the target 
+    /// extension method.</param>
+    /// <param name="extensionMethodName">The name of the target extension method.</param>
     /// <param name="parameterTypes">An optional list of parameter type(s) 
     /// to match against.</param>
     /// <param name="assemblyWhiteList">An optional white list of assembly
@@ -563,8 +608,8 @@ public static partial class AppDomainExtensions
     public static IEnumerable<MethodInfo> ExtensionMethods<T1, T2>(
         this AppDomain appDomain,
         Type extensionType,
-        string methodName,
-        Type[] parameterTypes = null,
+        string extensionMethodName,
+        Type[]? parameterTypes = null,
         string assemblyWhiteList = "",
         string assemblyBlackList = "Microsoft*, System*, mscorlib, netstandard"
         )
@@ -572,7 +617,7 @@ public static partial class AppDomainExtensions
         // Validate the parameters before attempting to use them.
         Guard.Instance().ThrowIfNull(appDomain, nameof(appDomain))
             .ThrowIfNull(extensionType, nameof(extensionType))
-            .ThrowIfNullOrEmpty(methodName, nameof(methodName));
+            .ThrowIfNullOrEmpty(extensionMethodName, nameof(extensionMethodName));
 
         // Should we supply a valid value?
         if (parameterTypes == null)
@@ -671,7 +716,7 @@ public static partial class AppDomainExtensions
                 var typeMethods = type.GetMethods(
                     BindingFlags.Static | BindingFlags.Public
                     ).Where(x =>
-                        x.Name == methodName &&
+                        x.Name == extensionMethodName &&
                         x.IsDefined(typeof(ExtensionAttribute), false) &&
                         x.ContainsGenericParameters
                         );
@@ -679,64 +724,81 @@ public static partial class AppDomainExtensions
                 // Loop through any methods we find.
                 foreach (var method in typeMethods)
                 {
-                    // Get the generic type arguments.
-                    var genArgs = method.GetGenericArguments();
-
-                    // Do the type args counts match?
-                    if (2 != genArgs.Length)
+                    // Were parameter types provided?
+                    if (parameterTypes.Any())
                     {
-                        continue; // Generic type counts don't match.
-                    }
+                        // If we get here then the caller specified parameter types to
+                        //   match against, so we'll do that now.
 
-                    // Do the type args themselves match - or at least, are they
-                    //   assignable?
-                    if (false == genArgs[0].BaseType.IsAssignableFrom(typeof(T1)) ||
-                        false == genArgs[1].BaseType.IsAssignableFrom(typeof(T2)))
-                    {
-                        continue; // Generic types don't match.
-                    }
+                        // Get the generic type arguments.
+                        var genArgs = method.GetGenericArguments();
 
-                    // Get the parameter info.
-                    var pi = method.GetParameters();
-
-                    // Get the LHS of the comparison.
-                    var lhs = pi.Select(x => x.ParameterType).ToArray();
-
-                    // Get the RHS of the comparison.
-                    var rhs = new Type[] { extensionType }.Concat(parameterTypes).ToArray();
-
-                    // At this point we only know that we have an extension method with a matching
-                    //   name and type argument(s). We don't know if the signatures match, or not.
-                    //   Let's go determine that now.
-
-                    // Ignore methods with mismatched signatures.
-                    if (lhs.Count() != rhs.Count())
-                    {
-                        // Skip it.
-                        continue;
-                    }
-
-                    // Now verify that all the argument types either match, or at least, are
-                    //   assignable types (so that inherited/derived types work).
-
-                    var shouldAdd = true; // Assume we should add the method.
-
-                    // Check for non-assignable args.
-                    for (int z = 0; z < lhs.Length; z++)
-                    {
-                        // Are the arg types not assignable?
-                        if (false == lhs[z].IsAssignableTo(rhs[z]))
+                        // Do the type args counts match?
+                        if (2 != genArgs.Length)
                         {
-                            shouldAdd = false; // Nope, we don't want this method.
+                            continue; // Generic type counts don't match.
+                        }
+
+                        // Do the type args themselves match - or at least, are they
+                        //   assignable?
+                        if (false == genArgs[0].BaseType.IsAssignableFrom(typeof(T1)) ||
+                            false == genArgs[1].BaseType.IsAssignableFrom(typeof(T2)))
+                        {
+                            continue; // Generic types don't match.
+                        }
+
+                        // Get the parameter info.
+                        var pi = method.GetParameters();
+
+                        // Get the LHS of the comparison.
+                        var lhs = pi.Select(x => x.ParameterType).ToArray();
+
+                        // Get the RHS of the comparison.
+                        var rhs = new Type[] { extensionType }.Concat(parameterTypes).ToArray();
+
+                        // At this point we only know that we have an extension method with a matching
+                        //   name and type argument(s). We don't know if the signatures match, or not.
+                        //   Let's go determine that now.
+
+                        // Ignore methods with mismatched signatures.
+                        if (lhs.Count() != rhs.Count())
+                        {
+                            // Skip it.
+                            continue;
+                        }
+
+                        // Now verify that all the argument types either match, or at least, are
+                        //   assignable types (so that inherited/derived types work).
+
+                        var shouldAdd = true; // Assume we should add the method.
+
+                        // Check for non-assignable args.
+                        for (int z = 0; z < lhs.Length; z++)
+                        {
+                            // Are the arg types not assignable?
+                            if (false == lhs[z].IsAssignableTo(rhs[z]))
+                            {
+                                shouldAdd = false; // Nope, we don't want this method.
+                                break;
+                            }
+                        }
+
+                        // Should we add the method?
+                        if (shouldAdd)
+                        {
+                            methods.Add(method); // Found a match.
                             break;
                         }
                     }
-
-                    // Should we add the method?
-                    if (shouldAdd)
+                    else
                     {
-                        methods.Add(method); // Found a match.
-                        break;
+                        // If we get here then the caller didn't specify any
+                        //   parameter types to match against, so, we'll take
+                        //   all the methods we found and let the caller decide
+                        //   which (if any) to use.
+
+                        // Add the method.
+                        methods.Add(method);
                     }
                 }
             }
